@@ -10,12 +10,26 @@
                         "Transform Your Academic Ecosystem: Automate Your Tasks, Get More Done with Less Time and Little Effort!",
                         "Unlock Academic Efficiency: Simple Systems, Better Effort, More Time Back."
                     ];
+                    const fonts = ["'Lato', sans-serif", "'Inter', sans-serif", "'Montserrat', sans-serif"];
                     let currentTitleIndex = 0;
-                    const titleChangeInterval = 15000; // Change title every 15 seconds (adjust as needed)
+                    const titleChangeInterval = 3000; // Adjust timing for the animation
+                    const heroHeading = $('.hero h1');
 
                     function updateHeroTitle() {
-                        $('.hero h1').html(heroTitles[currentTitleIndex] + ' <i class="bi bi-lightbulb-fill"></i>');
-                        currentTitleIndex = (currentTitleIndex + 1) % heroTitles.length;
+                        heroHeading.addClass('fading'); // Start fade out
+
+                        setTimeout(() => {
+                            heroHeading.html(heroTitles[currentTitleIndex] + ' <i class="bi bi-lightbulb-fill"></i>');
+                            const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+                            heroHeading.css('font-family', randomFont); // Apply random font
+                            heroHeading.addClass('changing'); // Start underline animation
+                            heroHeading.removeClass('fading'); // Fade in
+                            currentTitleIndex = (currentTitleIndex + 1) % heroTitles.length;
+
+                            setTimeout(() => {
+                                heroHeading.removeClass('changing'); // Remove underline after a short delay
+                            }, 500); // Adjust delay as needed
+                        }, 500); // Match the fade out duration
                     }
 
                     updateHeroTitle(); // Set the initial title
@@ -102,6 +116,9 @@
                     if (data.headerLogo) {
                         $('#header-logo').attr('src', data.headerLogo);
                     }
+
+                    // Add Google Fonts
+                    $('head').append('<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400,700&family=Inter:wght@400,700&family=Montserrat:wght@700&display=swap" rel="stylesheet">');
                 })
                 .catch(error => {
                     console.error('Error fetching or processing JSON:', error);
