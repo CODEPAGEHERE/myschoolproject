@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header class="bg-light">
+   <header class="bg-light">
         <nav class="navbar navbar-expand-lg navbar-light container">
+            <div class="logo-container mr-2">
+                <img id="header-logo" src="path/to/your-logo.png" alt="Logo">
+            </div>
             <a class="navbar-brand" href="#">{{ umbrellaProjectName }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -19,6 +23,12 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/myexamspace">MyexamSpace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">SchoolMe</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#our-solutions">Our Solutions</a>
@@ -34,19 +44,20 @@
         </nav>
     </header>
 
+
     <main>
         <section class="hero py-5 bg-primary text-white text-center">
             <div class="container">
-                <h1 class="display-4">{{ hero.title }}</h1>
+                <h1 class="display-4">{{ hero.title }} <i class="bi bi-lightbulb-fill"></i></h1> <!- - Example Bootstrap Icon - ->
                 <p class="lead">{{ hero.description }}</p>
                 <img src="{{ hero.image }}" alt="{{ umbrellaProjectName }}" class="img-fluid rounded mt-3">
-                <a href="{{ hero.callToAction.link }}" class="btn btn-light btn-lg mt-4">{{ hero.callToAction.text }}</a>
+                <a href="{{ hero.callToAction.link }}" class="btn btn-light btn-lg mt-4">{{ hero.callToAction.text }} <i class="bi bi-arrow-right-circle-fill"></i></a> <!- - Example Bootstrap Icon - ->
             </div>
         </section>
 
         <section id="our-solutions" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-4">{{ ourSolutions.title }}</h2>
+                <h2 class="text-center mb-4"><i class="bi bi-stack"></i> {{ ourSolutions.title }}</h2> <!- - Example Bootstrap Icon - ->
                 <p class="lead text-center mb-5">{{ ourSolutions.description }}</p>
                 <div class="row">
                     {{#each ourSolutions.featuredApps}}
@@ -57,7 +68,7 @@
                                 <h5 class="card-title">{{name}}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">{{tagline}}</h6>
                                 <p class="card-text">{{description}}</p>
-                                <a href="{{link}}" class="btn btn-primary">{{#ifEquals link '#' }} Coming Soon {{else}} Learn More {{/ifEquals}}</a>
+                                <a href="{{link}}" class="btn btn-primary">{{#ifEquals link '#' }} Coming Soon {{else}} Learn More {{/ifEquals}} <i class="bi bi-eye-fill"></i></a> <!- - Example Bootstrap Icon - ->
                             </div>
                         </div>
                     </div>
@@ -68,7 +79,7 @@
 
         <section id="why-partner" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-4">{{ whyPartner.title }}</h2>
+                <h2 class="text-center mb-4"><i class="bi bi-handshake-fill"></i> {{ whyPartner.title }}</h2> <!- - Example Bootstrap Icon - ->
                 <div class="row">
                     {{#each whyPartner.points}}
                     <div class="col-md-6 mb-4">
@@ -86,20 +97,47 @@
 
         <section id="call-to-action" class="py-5 bg-info text-white text-center">
             <div class="container">
-                <h2 class="mb-3">{{ callToActionPartnership.title }}</h2>
+                <h2 class="mb-3"><i class="bi bi-rocket-fill"></i> {{ callToActionPartnership.title }}</h2> <!- - Example Bootstrap Icon - ->
                 <p class="lead mb-4">{{ callToActionPartnership.description }}</p>
-                <a href="{{ callToActionPartnership.buttonLink }}" class="btn btn-light btn-lg">{{ callToActionPartnership.buttonText }}</a>
+                <a href="{{ callToActionPartnership.buttonLink }}" class="btn btn-light btn-lg"><i class="bi bi-envelope-fill mr-2"></i> {{ callToActionPartnership.buttonText }}</a> <!- - Example Bootstrap Icon - ->
             </div>
         </section>
 
         <section id="contact-us" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-4">{{ contactUs.title }}</h2>
+                <h2 class="text-center mb-4"><i class="bi bi-chat-left-fill"></i> {{ contactUs.title }}</h2> <!- - Example Bootstrap Icon - ->
                 <p class="lead text-center mb-3">{{ contactUs.description }}</p>
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6">
                         <p><i class="bi bi-envelope-fill text-primary mr-2"></i> Email: <a href="mailto:{{ contactUs.email }}">{{ contactUs.email }}</a></p>
                         <p><i class="bi bi-telephone-fill text-primary mr-2"></i> Phone: {{ contactUs.phone }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4"><i class="bi bi-question-circle-fill"></i> Frequently Asked Questions</h2> <!- - Example Bootstrap Icon - ->
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        {{#each faq}}
+                        <div class="card mb-3">
+                            <div class="card-header" id="heading{{@index}}">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{@index}}" aria-expanded="true" aria-controls="collapse{{@index}}">
+                                        {{question}}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapse{{@index}}" class="collapse" aria-labelledby="heading{{@index}}" data-parent="#faq">
+                                <div class="card-body">
+                                    {{answer}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
                     </div>
                 </div>
             </div>
@@ -118,25 +156,18 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
     <script>
         window.onload = function() {
             fetch('home.json')
                 .then(response => response.json())
                 .then(data => {
-                    // Populate the umbrella project name and tagline
                     $('title').text(data.umbrellaProjectName);
                     $('.navbar-brand').text(data.umbrellaProjectName);
-
-                    // Populate the hero section
-                    $('.hero h1').text(data.hero.title);
+                    $('.hero h1').html(data.hero.title + ' <i class="bi bi-lightbulb-fill"></i>');
                     $('.hero .lead').text(data.hero.description);
                     $('.hero img').attr('src', data.hero.image).attr('alt', data.umbrellaProjectName);
-                    $('.hero .btn').text(data.hero.callToAction.text).attr('href', data.hero.callToAction.link);
-
-                    // Populate the "Our Solutions" section
-                    $('#our-solutions h2').text(data.ourSolutions.title);
+                    $('.hero .btn').html(data.hero.callToAction.text + ' <i class="bi bi-arrow-right-circle-fill"></i>').attr('href', data.hero.callToAction.link);
+                    $('#our-solutions h2').html('<i class="bi bi-stack"></i> ' + data.ourSolutions.title);
                     $('#our-solutions .lead').text(data.ourSolutions.description);
 
                     let featuredAppsHtml = '';
@@ -148,8 +179,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">${app.name}</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">${app.tagline}</h6>
-                                        <p class="card-text">${app.description}</p>
-                                        <a href="${app.link}" class="btn btn-primary">${app.link === '#' ? 'Coming Soon' : 'Learn More'}</a>
+                                        <p class="card-text">{{description}}</p>
+                                        <a href="${app.link}" class="btn btn-primary">${app.link === '#' ? 'Coming Soon' : 'Learn More'} <i class="bi bi-eye-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -157,8 +188,7 @@
                     });
                     $('#our-solutions .row').html(featuredAppsHtml);
 
-                    // Populate the "Why Partner" section
-                    $('#why-partner h2').text(data.whyPartner.title);
+                    $('#why-partner h2').html('<i class="bi bi-handshake-fill"></i> ' + data.whyPartner.title);
                     let whyPartnerPointsHtml = '';
                     data.whyPartner.points.forEach(point => {
                         whyPartnerPointsHtml += `
@@ -174,29 +204,51 @@
                     });
                     $('#why-partner .row').html(whyPartnerPointsHtml);
 
-                    // Populate the partnership call to action
-                    $('#call-to-action h2').text(data.callToActionPartnership.title);
+                    $('#call-to-action h2').html('<i class="bi bi-rocket-fill"></i> ' + data.callToActionPartnership.title);
                     $('#call-to-action .lead').text(data.callToActionPartnership.description);
-                    $('#call-to-action .btn').text(data.callToActionPartnership.buttonText).attr('href', data.callToActionPartnership.buttonLink);
+                    $('#call-to-action .btn').html('<i class="bi bi-envelope-fill mr-2"></i> ' + data.callToActionPartnership.buttonText).attr('href', data.callToActionPartnership.buttonLink);
 
-                    // Populate the contact us section
-                    $('#contact-us h2').text(data.contactUs.title);
+                    $('#contact-us h2').html('<i class="bi bi-chat-left-fill"></i> ' + data.contactUs.title);
                     $('#contact-us .lead').text(data.contactUs.description);
                     $('#contact-us p:first-child a').text(data.contactUs.email).attr('href', 'mailto:' + data.contactUs.email);
                     $('#contact-us p:last-child').text('Phone: ' + data.contactUs.phone);
 
-                    // Populate the footer
                     $('.footer .mb-0').text(data.footer.copyright);
                     let footerLinksHtml = '';
                     data.footer.links.forEach(link => {
-                        footerLinksHtml += `<a href="${link.link}" class="text-white-50 mr-3">${link.text}</a>`;
+                        footerLinksHtml += `<a href="${link.link}" class="text-white-50 mr-3">{{text}}</a>`;
                     });
                     $('.footer div').html(footerLinksHtml);
+
+                    // Populate FAQ
+                    let faqHtml = '';
+                    data.faq.forEach((item, index) => {
+                        faqHtml += `
+                            <div class="card mb-3">
+                                <div class="card-header" id="heading${index}">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse${index}" aria-expanded="${index === 0 ? 'true' : 'false'}" aria-controls="collapse${index}">
+                                            ${item.question}
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse${index}" class="collapse ${index === 0 ? 'show' : ''}" aria-labelledby="heading${index}" data-parent="#faq">
+                                    <div class="card-body">
+                                        ${item.answer}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    $('#faq .row .col-md-8').html(faqHtml);
                 })
                 .catch(error => {
                     console.error('Error fetching or processing JSON:', error);
                 });
         };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

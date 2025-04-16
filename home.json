@@ -1,6 +1,7 @@
 {
   "umbrellaProjectName": "myschoolproject",
   "tagline": "Empowering Schools with Innovative Management Solutions.",
+  "headerLogo": "images/your-logo.png", <!- - ADD THIS LINE (adjust the path) - ->
   "hero": {
     "title": "Unlock Efficiency and Enhance Learning in Your School",
     "description": "myschoolproject is a suite of meticulously crafted applications designed to streamline school administration, empower educators, and create a more effective learning environment. Discover how our integrated solutions can transform your institution.",
@@ -78,7 +79,7 @@
     "phone": "+234 [Your Phone Number]"
   },
   "footer": {
-    "copyright": "&copy; 2025 myschoolproject. All rights reserved.",
+    "copyright": "Copyright &copy; 2025 myschoolproject. All rights reserved. | HappyCode Technologies.",
     "links": [
       {"text": "Privacy Policy", "link": "/privacy"},
       {"text": "Terms of Service", "link": "/terms"}
