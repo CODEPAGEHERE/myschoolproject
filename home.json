@@ -1,15 +1,15 @@
 {
   "umbrellaProjectName": "MyschoolProject",
-  "tagline": "Empowering Schools with Innovative Management Solutions.",
-  "headerLogo": "images/your-logo.png", 
+  "tagline": "",
+  "headerLogo": "", 
   "hero": {
-    "description": "myschoolproject is a suite of meticulously crafted applications designed to streamline school administration, empower educators, and create a more effective learning environment. Discover how our integrated solutions can transform your institution.",
-    "image": "path/to/myschoolproject-hero.jpg",
-    "callToAction": {
-      "text": "Explore Our Solutions",
-      "link": "#our-solutions"
-    }
-  },
+  "description": "myschoolproject is a unified suite of innovative applications designed to seamlessly integrate and automate every aspect of school management. From simplifying administrative tasks to enhancing teaching and learning, our interconnected software tools empower educators and transform educational institutions.",
+  "image": "images.logo.jpg",
+  "callToAction": {
+    "text": "Explore Our Solutions",
+    "link": "#our-solutions"
+  }
+},
   "ourSolutions": {
     "title": "Our Growing Suite of Powerful Apps",
     "description": "Built with the unique needs of schools in mind, the myschoolproject collection offers a range of tools to optimize various aspects of school management.",

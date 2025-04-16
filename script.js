@@ -12,7 +12,7 @@
                     ];
                     const fonts = ["'Lato', sans-serif", "'Inter', sans-serif", "'Montserrat', sans-serif"];
                     let currentTitleIndex = 0;
-                    const titleChangeInterval = 3000; // Adjust timing for the animation
+                    const titleChangeInterval = 10000; // Adjust timing for the animation
                     const heroHeading = $('.hero h1');
 
                     function updateHeroTitle() {
