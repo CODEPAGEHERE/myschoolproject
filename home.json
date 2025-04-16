@@ -1,0 +1,87 @@
+{
+  "umbrellaProjectName": "myschoolproject",
+  "tagline": "Empowering Schools with Innovative Management Solutions.",
+  "hero": {
+    "title": "Unlock Efficiency and Enhance Learning in Your School",
+    "description": "myschoolproject is a suite of meticulously crafted applications designed to streamline school administration, empower educators, and create a more effective learning environment. Discover how our integrated solutions can transform your institution.",
+    "image": "path/to/myschoolproject-hero.jpg",
+    "callToAction": {
+      "text": "Explore Our Solutions",
+      "link": "#our-solutions"
+    }
+  },
+  "ourSolutions": {
+    "title": "Our Growing Suite of Powerful Apps",
+    "description": "Built with the unique needs of schools in mind, the myschoolproject collection offers a range of tools to optimize various aspects of school management.",
+    "featuredApps": [
+      {
+        "name": "myexamspace",
+        "tagline": "Effortless Offline Exams & Auto-Grading",
+        "description": "Revolutionize your assessment process with myexamspace, the first app in our collection. Conduct secure, offline exams with automatic marking, support for diverse question types, and insightful performance analysis. Perfect for overcoming connectivity challenges and saving valuable time.",
+        "link": "/myexamspace",
+        "image": "path/to/myexamspace-preview.png"
+      },
+      {
+        "name": "Coming Soon: [Name of App 2]",
+        "tagline": "[Brief, impactful tagline for App 2]",
+        "description": "Stay tuned for [Name of App 2], designed to [briefly mention the core function of App 2].",
+        "link": "#",
+        "image": "path/to/app2-preview.png"
+      },
+      {
+        "name": "Coming Soon: [Name of App 3]",
+        "tagline": "[Brief, impactful tagline for App 3]",
+        "description": "Anticipate the arrival of [Name of App 3], which will help you to [briefly mention the core function of App 3].",
+        "link": "#",
+        "image": "path/to/app3-preview.png"
+      },
+      {
+        "name": "And More...",
+        "tagline": "Expanding to Meet Your Needs",
+        "description": "Our commitment is to continuously develop and expand the myschoolproject collection with more innovative apps designed to address the evolving challenges of school management.",
+        "link": "#",
+        "image": "path/to/more-apps-preview.png"
+      }
+    ]
+  },
+  "whyPartner": {
+    "title": "Why Choose myschoolproject for Your School?",
+    "points": [
+      {
+        "title": "Efficiency & Time Savings",
+        "description": "Automate key administrative tasks, freeing up educators to focus on what matters most – teaching and student development."
+      },
+      {
+        "title": "Data-Driven Insights",
+        "description": "Gain valuable analytics on student performance and school operations to make informed decisions and drive continuous improvement."
+      },
+      {
+        "title": "Scalable & Integrated Solutions",
+        "description": "Our growing suite of apps works together seamlessly, providing a comprehensive and scalable solution for your school's needs."
+      },
+      {
+        "title": "Dedicated Support & Innovation",
+        "description": "Benefit from ongoing updates, dedicated support, and a commitment to developing cutting-edge solutions that address the real challenges faced by schools."
+      }
+    ]
+  },
+  "callToActionPartnership": {
+    "title": "Ready to Transform Your School?",
+    "description": "Partner with myschoolproject and take the first step towards a more efficient and effective educational environment.",
+    "buttonText": "Request a Demo",
+    "buttonLink": "/contact"
+  },
+  "contactUs": {
+    "title": "Get in Touch",
+    "description": "Have questions or want to discuss how myschoolproject can benefit your school? Reach out to us today.",
+    "email": "partnerships@myschoolproject.com",
+    "phone": "+234 [Your Phone Number]"
+  },
+  "footer": {
+    "copyright": "&copy; 2025 myschoolproject. All rights reserved.",
+    "links": [
+      {"text": "Privacy Policy", "link": "/privacy"},
+      {"text": "Terms of Service", "link": "/terms"}
+    ]
+  }
+}
