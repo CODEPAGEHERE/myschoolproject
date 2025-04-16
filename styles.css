@@ -1,7 +1,5 @@
 /* style.css */
 
-/* ... other styles ... */
-
 .logo-container {
     width: 40px; /* Adjust size as needed */
     height: 40px; /* Adjust size as needed */
@@ -20,4 +18,15 @@
 
 .navbar-brand {
     margin-left: 5px; /* Adjust spacing between logo and brand name */
+}
+
+.hero h1 {
+    font-weight: 700; /* Makes the font bolder (you can try higher values like 800 or 900 for even thicker) */
+    font-size: 2.5rem; 
+}
+
+
+.hero h1 i {
+    /* You could try adding a text-shadow to give a thicker appearance, but it might not look ideal on all icons */
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; 
 }

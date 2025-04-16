@@ -11,7 +11,7 @@
                         "Unlock Academic Efficiency: Simple Systems, Better Effort, More Time Back."
                     ];
                     let currentTitleIndex = 0;
-                    const titleChangeInterval = 5000; // Change title every 5 seconds (adjust as needed)
+                    const titleChangeInterval = 15000; // Change title every 15 seconds (adjust as needed)
 
                     function updateHeroTitle() {
                         $('.hero h1').html(heroTitles[currentTitleIndex] + ' <i class="bi bi-lightbulb-fill"></i>');
