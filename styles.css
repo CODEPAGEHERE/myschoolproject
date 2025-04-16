@@ -60,15 +60,8 @@
     opacity: 0;
 }
 
-.hero .logo-container { /* Assuming you'll wrap the image in a div with this class */
-    width: 150px; /* Adjust desktop size as needed */
-    height: 150px; /* Adjust desktop size as needed */
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 20px auto; /* Center the circular image on desktop */
-}
 
-.hero .logo-container img {
+.hero img {
     width: 100%;
     height: auto;
     display: block;
@@ -81,7 +74,7 @@
     }
 
     .hero .lead {
-        font-size: 0.8rem; /* Smaller font size for mobile */
+        font-size: 1.0rem; /* Smaller font size for mobile */
     }
 
     .hero img {
