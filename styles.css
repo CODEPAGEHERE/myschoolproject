@@ -81,12 +81,13 @@
     }
 
     .hero .lead {
-        font-size: 1.0rem; /* Smaller font size for mobile */
+        font-size: 0.8rem; /* Smaller font size for mobile */
     }
 
-    .hero .logo-container {
+    .hero img {
         width: 100px; /* Smaller circular image for mobile */
         height: 100px; /* Smaller circular image for mobile */
         margin: 15px auto; /* Adjust margin for mobile */
+		border-radius:70%;
     }
 }

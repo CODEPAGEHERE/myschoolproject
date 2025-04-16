@@ -19,7 +19,7 @@
                         heroHeading.addClass('fading'); // Start fade out
 
                         setTimeout(() => {
-                            heroHeading.html(heroTitles[currentTitleIndex] + ' <i class="bi bi-lightbulb-fill"></i>');
+                            heroHeading.html(heroTitles[currentTitleIndex] + ' <i class="bi bi-box"></i>');
                             const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
                             heroHeading.css('font-family', randomFont); // Apply random font
                             heroHeading.addClass('changing'); // Start underline animation
