@@ -59,3 +59,34 @@
 .hero h1.fading {
     opacity: 0;
 }
+
+.hero .logo-container { /* Assuming you'll wrap the image in a div with this class */
+    width: 150px; /* Adjust desktop size as needed */
+    height: 150px; /* Adjust desktop size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto; /* Center the circular image on desktop */
+}
+
+.hero .logo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.0rem; /* Smaller font size for mobile */
+    }
+
+    .hero .lead {
+        font-size: 1.0rem; /* Smaller font size for mobile */
+    }
+
+    .hero .logo-container {
+        width: 100px; /* Smaller circular image for mobile */
+        height: 100px; /* Smaller circular image for mobile */
+        margin: 15px auto; /* Adjust margin for mobile */
+    }
+}
