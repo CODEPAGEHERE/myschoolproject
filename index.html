@@ -13,7 +13,7 @@
    <header class="bg-light">
         <nav class="navbar navbar-expand-lg navbar-light container">
             <div class="logo-container mr-2">
-                <img id="header-logo" src="path/to/your-logo.png" alt="Logo">
+                <img id="header-logo" src="image/logo.jpeg" alt="Logo">
             </div>
             <a class="navbar-brand" href="#">{{ umbrellaProjectName }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -155,7 +155,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script>
         window.onload = function() {
             fetch('home.json')
@@ -163,7 +163,23 @@
                 .then(data => {
                     $('title').text(data.umbrellaProjectName);
                     $('.navbar-brand').text(data.umbrellaProjectName);
-                    $('.hero h1').html(data.hero.title + ' <i class="bi bi-lightbulb-fill"></i>');
+
+                    const heroTitles = [
+                        "Reimagine Education: The Key to Simplifying Academic Workflows and Optimizing Effort for Maximum Efficiency.",
+                        "Transform Your Academic Ecosystem: Automate Your Tasks, Get More Done with Less Time and Little Effort!",
+                        "Unlock Academic Efficiency: Simple Systems, Better Effort, More Time Back."
+                    ];
+                    let currentTitleIndex = 0;
+                    const titleChangeInterval = 5000; // Change title every 5 seconds (adjust as needed)
+
+                    function updateHeroTitle() {
+                        $('.hero h1').html(heroTitles[currentTitleIndex] + ' <i class="bi bi-lightbulb-fill"></i>');
+                        currentTitleIndex = (currentTitleIndex + 1) % heroTitles.length;
+                    }
+
+                    updateHeroTitle(); // Set the initial title
+                    setInterval(updateHeroTitle, titleChangeInterval); // Rotate titles
+
                     $('.hero .lead').text(data.hero.description);
                     $('.hero img').attr('src', data.hero.image).attr('alt', data.umbrellaProjectName);
                     $('.hero .btn').html(data.hero.callToAction.text + ' <i class="bi bi-arrow-right-circle-fill"></i>').attr('href', data.hero.callToAction.link);
@@ -172,35 +188,14 @@
 
                     let featuredAppsHtml = '';
                     data.ourSolutions.featuredApps.forEach(app => {
-                        featuredAppsHtml += `
-                            <div class="col-md-6 col-lg-3 mb-4">
-                                <div class="card h-100">
-                                    <img src="${app.image}" class="card-img-top" alt="${app.name}">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${app.name}</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">${app.tagline}</h6>
-                                        <p class="card-text">{{description}}</p>
-                                        <a href="${app.link}" class="btn btn-primary">${app.link === '#' ? 'Coming Soon' : 'Learn More'} <i class="bi bi-eye-fill"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
+                        featuredAppsHtml += ``;
                     });
                     $('#our-solutions .row').html(featuredAppsHtml);
 
                     $('#why-partner h2').html('<i class="bi bi-handshake-fill"></i> ' + data.whyPartner.title);
                     let whyPartnerPointsHtml = '';
                     data.whyPartner.points.forEach(point => {
-                        whyPartnerPointsHtml += `
-                            <div class="col-md-6 mb-4">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><i class="bi bi-check-circle-fill text-success mr-2"></i> ${point.title}</h5>
-                                        <p class="card-text">${point.description}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
+                        whyPartnerPointsHtml += ``;
                     });
                     $('#why-partner .row').html(whyPartnerPointsHtml);
 
@@ -216,32 +211,19 @@
                     $('.footer .mb-0').text(data.footer.copyright);
                     let footerLinksHtml = '';
                     data.footer.links.forEach(link => {
-                        footerLinksHtml += `<a href="${link.link}" class="text-white-50 mr-3">{{text}}</a>`;
+                        footerLinksHtml += ``;
                     });
                     $('.footer div').html(footerLinksHtml);
 
-                    // Populate FAQ
                     let faqHtml = '';
                     data.faq.forEach((item, index) => {
-                        faqHtml += `
-                            <div class="card mb-3">
-                                <div class="card-header" id="heading${index}">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse${index}" aria-expanded="${index === 0 ? 'true' : 'false'}" aria-controls="collapse${index}">
-                                            ${item.question}
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="collapse${index}" class="collapse ${index === 0 ? 'show' : ''}" aria-labelledby="heading${index}" data-parent="#faq">
-                                    <div class="card-body">
-                                        ${item.answer}
-                                    </div>
-                                </div>
-                            </div>
-                        `;
+                        faqHtml += ``;
                     });
                     $('#faq .row .col-md-8').html(faqHtml);
+
+                    if (data.headerLogo) {
+                        $('#header-logo').attr('src', data.headerLogo);
+                    }
                 })
                 .catch(error => {
                     console.error('Error fetching or processing JSON:', error);
