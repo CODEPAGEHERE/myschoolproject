@@ -31,8 +31,8 @@
         "description": "Coming soon! SchoolMeApp is currently in its early alpha phase, designed to be your comprehensive portal. Stay tuned for its production release, bringing you centralized tools to organize, connect, communicate, and efficiently manage all aspects of your school community for a more connected and efficient educational environment.",
         "link": "#",
         "images": [
-          "image/sm1.jpg",
-          "image/sm2.jpg"
+          "image/mlogo.jpeg",
+          "image/mlogo.jpeg",
         ]
       },
       {
@@ -48,7 +48,7 @@
     ]
   },
   "whyPartner": {
-    "title": "Why Choose myschoolproject for Your School?",
+    "title": "Why Choose MySchoolProject for Your School?",
     "points": [
       {
         "title": "Efficiency & Time Savings",
@@ -70,7 +70,7 @@
   },
   "callToActionPartnership": {
     "title": "Ready to Transform Your School?",
-    "description": "Partner with myschoolproject and take the first step towards a more efficient and effective educational environment.",
+    "description": "Partner with MySchoolProject and take the first step towards a more efficient and effective educational environment. We're dedicated to providing you with friendly, professional tools and solutions designed to help your school achieve peak efficiency and speed, ultimately keeping you ahead of the curve",
     "buttonText": "Request a Demo",
     "buttonLink": "/contact"
   },
