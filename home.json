@@ -25,7 +25,7 @@
       "image/mxp3.jpg"
     ]
   },
-      {
+    {
         "name": "Coming Soon: SchoolMeApp",
         "tagline": "A portal for school ",
         "description": "to be available in production soon...",
@@ -44,8 +44,6 @@
       "image/mlogo.jpg",
       "image/mlogo.jpg",
 		]
-      }
-    ]
   },
   "whyPartner": {
     "title": "Why Choose myschoolproject for Your School?",
