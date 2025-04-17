@@ -3,7 +3,7 @@
   "tagline": "",
   "headerLogo": "",
   "hero": {
-    "description": "myschoolproject is a unified suite of innovative applications designed to seamlessly integrate and automate every aspect of school management. From simplifying administrative tasks to enhancing teaching and learning, our interconnected software tools empower educators and transform educational institutions.",
+    "description": "MySchoolProject is a unified suite of innovative applications designed to seamlessly integrate and automate every aspect of school management. From simplifying administrative tasks to enhancing teaching and learning, our interconnected software tools empower educators and transform educational institutions.",
     "image": "image/mlogo.jpeg",
     "callToAction": {
       "text": "Explore Our Solutions",
@@ -29,7 +29,7 @@
         "name": "SchoolMeApp (Alpha)",
         "tagline": "All Your School Needs in One Easy Portal: Organize, Connect, and Manage with SchoolMeApp.",
         "description": "Coming soon! SchoolMeApp is currently in its early alpha phase, designed to be your comprehensive portal. Stay tuned for its production release, bringing you centralized tools to organize, connect, communicate, and efficiently manage all aspects of your school community for a more connected and efficient educational environment.",
-        "link": "#",
+        "link": "/schoolme",
         "images": [
           "image/mlogo.jpeg",
           "image/mlogo.jpeg"
@@ -72,7 +72,7 @@
     "title": "Ready to Transform Your School?",
     "description": "Partner with MySchoolProject and take the first step towards a more efficient and effective educational environment. We're dedicated to providing you with friendly, professional tools and solutions designed to help your school achieve peak efficiency and speed, ultimately keeping you ahead of the curve",
     "buttonText": "Request a Demo",
-    "buttonLink": "/contact"
+    "buttonLink": "#contact-us"
   },
   "contactUs": {
     "title": "Get in Touch",
@@ -81,10 +81,32 @@
     "phone": ""
   },
   "footer": {
-    "copyright": "Copyright &copy; 2025 myschoolproject. All rights reserved. | HappyCode Technologies.",
+    "copyright": "Copyright &copy; 2025 myschoolproject. All rights reserved. | HappyCode Technologies & Graphitie.",
     "links": [
       {"text": "Privacy Policy", "link": "/privacy"},
       {"text": "Terms of Service", "link": "/terms"}
     ]
-  }
+  },
+  "faq": [
+    {
+      "question": "What are the key features of MySchoolProject?",
+      "answer": "MySchoolProject offers a suite of applications for school management, including tools for exams, communication, administration, and more, all designed to integrate seamlessly."
+    },
+    {
+      "question": "Is there a cost to use MySchoolProject?",
+      "answer": "We offer various subscription plans to suit different school sizes and needs. Please visit our pricing page or contact us for more details."
+    },
+    {
+      "question": "How secure is the data stored within MySchoolProject?",
+      "answer": "Data security is a top priority. We employ industry-standard encryption and security measures to ensure the safety and privacy of your school's information."
+    },
+    {
+      "question": "Can we customize the applications to fit our school's specific requirements?",
+      "answer": "While our core applications are designed for broad applicability, we offer some customization options. Please contact our support team to discuss your specific needs."
+    },
+    {
+      "question": "What kind of support do you offer?",
+      "answer": "We provide comprehensive support, including documentation, tutorials, and a dedicated support team to assist you with any questions or issues."
+    }
+  ]
 }
