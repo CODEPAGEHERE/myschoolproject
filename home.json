@@ -32,7 +32,7 @@
         "link": "#",
         "images": [
           "image/mlogo.jpeg",
-          "image/mlogo.jpeg",
+          "image/mlogo.jpeg"
         ]
       },
       {
@@ -76,9 +76,9 @@
   },
   "contactUs": {
     "title": "Get in Touch",
-    "description": "Have questions or want to discuss how myschoolproject can benefit your school? Reach out to us today.",
-    "email": "partnerships@myschoolproject.com",
-    "phone": "+234 [Your Phone Number]"
+    "description": "Have questions or want to discuss how MyschoolProject can benefit your school? Reach out to us today.",
+    "email": "",
+    "phone": ""
   },
   "footer": {
     "copyright": "Copyright &copy; 2025 myschoolproject. All rights reserved. | HappyCode Technologies.",
