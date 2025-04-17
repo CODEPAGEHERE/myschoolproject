@@ -3,7 +3,7 @@
 Code.Page.12=> v . 7 . 1 <br>
 MySchool Project Official  Website !...<br>
 a product of : <br>
-      Frontend : Html / Css + (Bootstrap-4) / Bootstrap icons / Google icons/ Google Font / Javascript + (Jquery) / GSAP / json / <br>
+      Frontend : Html / Css + (Bootstrap-4) / Bootstrap icons / Google Font / Javascript + (Jquery) / GSAP / json / <br>
       Backend :// <br>
       Database :// <br>
       Server :// <br>

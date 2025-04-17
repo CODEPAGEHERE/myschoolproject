@@ -19,7 +19,7 @@
                         heroHeading.addClass('fading'); // Start fade out
 
                         setTimeout(() => {
-                            heroHeading.html(heroTitles[currentTitleIndex] + ' <i class="bi bi-box"></i>');
+                            heroHeading.html(heroTitles[currentTitleIndex] + ' <i class="bi bi-box"></i>'); // Changed icon for now - update as needed
                             const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
                             heroHeading.css('font-family', randomFont); // Apply random font
                             heroHeading.addClass('changing'); // Start underline animation
@@ -41,23 +41,57 @@
                     $('#our-solutions h2').html('<i class="bi bi-stack"></i> ' + data.ourSolutions.title);
                     $('#our-solutions .lead').text(data.ourSolutions.description);
 
-                    let featuredAppsHtml = '';
+                    // --- NEW CODE FOR OUR SOLUTIONS SECTION ---
+                    let ourSolutionsHtml = `
+                        <div class="container-fluid">
+                            <h2 class="text-center mb-4"><i class="bi bi-stack"></i> ${data.ourSolutions.title}</h2>
+                            <p class="lead text-center mb-5">${data.ourSolutions.description}</p>
+                    `;
+
                     data.ourSolutions.featuredApps.forEach(app => {
-                        featuredAppsHtml += `
-                            <div class="col-md-6 col-lg-3 mb-4">
-                                <div class="card h-100">
-                                    <img src="${app.image}" class="card-img-top" alt="${app.name}">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${app.name}</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">${app.tagline}</h6>
-                                        <p class="card-text">{{description}}</p>
-                                        <a href="${app.link}" class="btn btn-primary">${app.link === '#' ? 'Coming Soon' : 'Learn More'} <i class="bi bi-eye-fill"></i></a>
-                                    </div>
+                        let imageCarouselHtml = '';
+                        if (app.images && app.images.length > 0) {
+                            app.images.forEach(image => {
+                                imageCarouselHtml += `<img src="${image}" alt="${app.name} preview">`;
+                            });
+                        } else {
+                            imageCarouselHtml = `<img src="${app.image || 'path/to/default-image.png'}" alt="${app.name} preview">`; // Fallback
+                        }
+
+                        ourSolutionsHtml += `
+                            <div class="app-slide">
+                                <div class="app-image-carousel" data-image-count="${app.images ? app.images.length : 1}">
+                                    ${imageCarouselHtml}
+                                </div>
+                                <div class="app-details">
+                                    <h5 class="card-title">${app.name}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">${app.tagline}</h6>
+                                    <p class="card-text">${app.description}</p>
+                                    <a href="${app.link}" class="btn btn-primary">${app.link === '#' ? 'Coming Soon' : 'Learn More'} <i class="bi bi-eye-fill"></i></a>
+                                    <p class="mt-3"><a href="#">Learn More Details</a></p>
                                 </div>
                             </div>
                         `;
                     });
-                    $('#our-solutions .row').html(featuredAppsHtml);
+
+                    ourSolutionsHtml += `</div>`;
+                    $('#our-solutions').html(ourSolutionsHtml);
+
+                    // Auto-scroll image carousel
+                    const appCarousels = document.querySelectorAll('.app-image-carousel');
+                    appCarousels.forEach(carousel => {
+                        const imageCount = parseInt(carousel.dataset.imageCount);
+                        let currentIndex = 0;
+                        const scrollInterval = 3000; // Adjust interval as needed
+
+                        if (imageCount > 1) {
+                            setInterval(() => {
+                                currentIndex = (currentIndex + 1) % imageCount;
+                                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                            }, scrollInterval);
+                        }
+                    });
+                    // --- END OF NEW CODE FOR OUR SOLUTIONS SECTION ---
 
                     $('#why-partner h2').html('<i class="bi bi-handshake-fill"></i> ' + data.whyPartner.title);
                     let whyPartnerPointsHtml = '';
@@ -124,4 +158,3 @@
                     console.error('Error fetching or processing JSON:', error);
                 });
         };
- 

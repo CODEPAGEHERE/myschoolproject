@@ -65,6 +65,7 @@
     width: 200px;
     height: 200px;
     display: block;
+	margin-left:450px;
 }
 
 /* Media query for smaller screens (e.g., phones) */
@@ -82,5 +83,72 @@
         height: 100px; /* Smaller circular image for mobile */
         margin: 15px auto; /* Adjust margin for mobile */
 		border-radius:70%;
+    }
+}
+
+/* style.css */
+
+/* ... other styles ... */
+
+#our-solutions .container-fluid {
+    padding: 0; /* Remove container padding for full width */
+}
+
+.app-slide {
+    display: flex;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* For smooth snapping between sections */
+    -webkit-overflow-scrolling: touch; /* For iOS smooth scrolling */
+    padding: 20px;
+    background-color: #fff; /* Optional background for each slide */
+    margin-bottom: 20px; /* Spacing between app slides */
+}
+
+.app-image-carousel {
+    flex-shrink: 0;
+    width: 50%; /* Adjust as needed */
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* For image sliding animation */
+}
+
+.app-image-carousel img {
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images fill the space without distortion */
+}
+
+.app-details {
+    flex-shrink: 0;
+    width: 50%; /* Adjust as needed */
+    padding-left: 30px; /* Spacing between image and details */
+}
+
+.app-details .btn {
+    margin-top: 15px;
+}
+
+/* Optional: Style the "Learn More Details" link */
+.app-details a:last-child {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Mobile adjustments (optional) */
+@media (max-width: 768px) {
+    .app-slide {
+        flex-direction: column; /* Stack image and details on mobile */
+        overflow-x: hidden; /* Disable horizontal scroll on mobile */
+    }
+
+    .app-image-carousel {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .app-details {
+        width: 100%;
+        padding-left: 0;
     }
 }
