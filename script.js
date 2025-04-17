@@ -118,12 +118,12 @@
                     $('#contact-us p:first-child a').text(data.contactUs.email).attr('href', 'mailto:' + data.contactUs.email);
                     $('#contact-us p:last-child').text('Phone: ' + data.contactUs.phone);
 
-                    $('.footer .mb-0').text(data.footer.copyright);
-                    let footerLinksHtml = '';
-                    data.footer.links.forEach(link => {
-                        footerLinksHtml += `<a href="${link.link}" class="text-white-50 mr-3">{{text}}</a>`;
-                    });
-                    $('.footer div').html(footerLinksHtml);
+					$('.footer .mb-0').text(data.footer.copyright); // Or $('#copyright').text(data.footer.copyright);
+					let footerLinksHtml = '';
+					data.footer.links.forEach(link => {
+						footerLinksHtml += `<a href="${link.link}" class="text-white-50 mr-3">${link.text}</a>`;
+					});
+					$('.footer div').html(footerLinksHtml); // Or $('#footer-links').html(footerLinksHtml);
 
                     let faqHtml = '';
                     data.faq.forEach((item, index) => {
