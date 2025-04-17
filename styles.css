@@ -104,7 +104,7 @@
     padding: 20px;
     background-color: #fff;
     margin-bottom: 30px; /* Increased margin to create space */
-	 flex-wrap: nowrap; 
+	position: relative; /* Needed for z-index on children */
 }
 
 
@@ -112,7 +112,8 @@
     flex-shrink: 0;
     width: 50%; /* Adjust as needed */
     display: flex;
-    transition: transform 0.5s ease-in-out; /* For image sliding animation */
+    transition: transform 10s ease-in-out; /* For image sliding animation */
+	z-index: 1;
 }
 
 
@@ -135,6 +136,9 @@
     flex-shrink: 0;
     width: 50%; /* Adjust as needed */
     padding-left: 30px; /* Spacing between image and details */
+	position: relative; /* Needed to potentially stack above image */
+	z-index: 3;
+	background-color: inherit; 
 }
 
 .app-details .btn {
