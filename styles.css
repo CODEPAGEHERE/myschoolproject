@@ -98,7 +98,7 @@
 .app-slide {
     display: flex;
     width: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding: 20px;
@@ -112,7 +112,7 @@
     flex-shrink: 0;
     width: 50%; /* Adjust as needed */
     display: flex;
-    transition: transform 10s ease-in-out; /* For image sliding animation */
+    transition: transform 1.0s ease-in-out; /* For image sliding animation */
 	z-index: 1;
 }
 
