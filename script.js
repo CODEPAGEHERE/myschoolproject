@@ -118,14 +118,18 @@
                     $('#contact-us p:first-child a').text(data.contactUs.email).attr('href', 'mailto:' + data.contactUs.email);
                     $('#contact-us p:last-child').text('Phone: ' + data.contactUs.phone);
 
-					// --- Footer Section ---
-					  $('#copyright').text(data.footer.copyright);
+					/// --- Footer Section ---
+					  const currentYear = new Date().getFullYear();
+					  const copyrightText = data.footer.copyright.replace('2025', currentYear);
+					  $('#copyright').text(copyrightText);
+
 					  let footerLinksHtml = '';
 					  data.footer.links.forEach(link => {
 						footerLinksHtml += `<a href="${link.link}" class="text-white-50 mr-3">${link.text}</a>`;
 					  });
 					  $('#footer-links').html(footerLinksHtml);
 					  // --- End Footer Section ---
+
 
                     let faqHtml = '';
                     data.faq.forEach((item, index) => {
