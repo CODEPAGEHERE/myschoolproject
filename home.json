@@ -15,9 +15,9 @@
     "description": "Built with the unique needs of schools in mind, The MyschoolProject Collection offers a range of tools to optimize various aspects of school management.",
     "featuredApps": [
       {
-        "name": "MyExamSpace",
-        "tagline": "Effortless Offline Exams & Auto-Grading",
-        "description": "Offline Examination Webapp , Built For Effortless accessment and Auto-Grading system with No Internet Required",
+        "name": "MyExamSpace (Beta)",
+        "tagline": "More Time Teaching, Less Time Grading: Offline Exams, Auto-Graded.",
+        "description": "Reclaim valuable teaching time with MyExamSpace: the offline web application designed for effortless assessment , automatic marking and grading, no internet required.",
         "link": "/myexamspace",
         "images": [
           "image/mxp1.jpg",
@@ -26,9 +26,9 @@
         ]
       },
       {
-        "name": "Coming Soon: SchoolMeApp",
-        "tagline": "A portal for school ",
-        "description": "to be available in production soon...",
+        "name": "SchoolMeApp (Alpha)",
+        "tagline": "All Your School Needs in One Easy Portal: Organize, Connect, and Manage with SchoolMeApp.",
+        "description": "Coming soon! SchoolMeApp is currently in its early alpha phase, designed to be your comprehensive portal. Stay tuned for its production release, bringing you centralized tools to organize, connect, communicate, and efficiently manage all aspects of your school community for a more connected and efficient educational environment.",
         "link": "#",
         "images": [
           "image/sm1.jpg",
@@ -36,13 +36,13 @@
         ]
       },
       {
-        "name": "Stay Tuned in for more updates",
+        "name": "Stay Tuned In For Latest Update",
         "tagline": "Constantly Expanding to Meet Your Needs",
         "description": "Our commitment is to continuously develop and expand the MyschoolProject Collection with more innovative apps designed to address the evolving challenges of school management.",
         "link": "#",
         "images": [
-          "image/mlogo.jpg",
-          "image/mlogo.jpg"
+          "image/mlogo.jpeg",
+          "image/mlogo.jpeg"
         ]
       }
     ]
