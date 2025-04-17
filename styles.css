@@ -86,24 +86,27 @@
     }
 }
 
-/* style.css */
-
-/* ... other styles ... */
 
 #our-solutions .container-fluid {
     padding: 0; /* Remove container padding for full width */
 }
 
+/* style.css */
+
+/* ... other styles ... */
+
 .app-slide {
     display: flex;
     width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scroll-snap-type: x mandatory; /* For smooth snapping between sections */
-    -webkit-overflow-scrolling: touch; /* For iOS smooth scrolling */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     padding: 20px;
-    background-color: #fff; /* Optional background for each slide */
-    margin-bottom: 20px; /* Spacing between app slides */
+    background-color: #fff;
+    margin-bottom: 30px; /* Increased margin to create space */
+	 flex-wrap: nowrap; 
 }
+
 
 .app-image-carousel {
     flex-shrink: 0;
@@ -112,12 +115,21 @@
     transition: transform 0.5s ease-in-out; /* For image sliding animation */
 }
 
+
 .app-image-carousel img {
     flex-shrink: 0;
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ensure images fill the space without distortion */
+    object-fit: cover;
+    margin-right: 10px; /* Add right margin for spacing */
 }
+
+
+.app-image-carousel img:last-child {
+    margin-right: 0;
+}
+
+
 
 .app-details {
     flex-shrink: 0;

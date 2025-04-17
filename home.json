@@ -12,12 +12,12 @@
 },
   "ourSolutions": {
     "title": "Our Growing Suite of Powerful Apps",
-    "description": "Built with the unique needs of schools in mind, the myschoolproject collection offers a range of tools to optimize various aspects of school management.",
+    "description": "Built with the unique needs of schools in mind, <b>The MyschoolProject Collection</b> offers a range of tools to optimize various aspects of school management.",
     "featuredApps": [
   {
-    "name": "myexamspace",
+    "name": "MyExamSpace",
     "tagline": "Effortless Offline Exams & Auto-Grading",
-    "description": "...",
+    "description": "Offline Examination Webapp , Built For Effortless accessment and Auto-Grading system with No Internet Required",
     "link": "/myexamspace",
     "images": [
       "image/mxp1.jpg",
@@ -26,36 +26,23 @@
     ]
   },
       {
-        "name": "Coming Soon: [Name of App 2]",
-        "tagline": "[Brief, impactful tagline for App 2]",
-        "description": "Stay tuned for [Name of App 2], designed to [briefly mention the core function of App 2].",
+        "name": "Coming Soon: SchoolMeApp",
+        "tagline": "A portal for school ",
+        "description": "to be available in production soon...",
         "link": "#",
        "images": [
-      "path/to/myexamspace-preview1.png",
-      "path/to/myexamspace-preview2.png",
-      "path/to/myexamspace-preview3.png"
+      "image/sm1.jpg",
+      "image/sm2.jpg"
 		]
       },
       {
-        "name": "Coming Soon: [Name of App 3]",
-        "tagline": "[Brief, impactful tagline for App 3]",
-        "description": "Anticipate the arrival of [Name of App 3], which will help you to [briefly mention the core function of App 3].",
+        "name": "Stay Tuned in for more updates",
+        "tagline": "Constantly Expanding to Meet Your Needs",
+        "description": "Our commitment is to continuously develop and expand the MyschoolProject Collection with more innovative apps designed to address the evolving challenges of school management.",
         "link": "#",
         "images": [
-      "path/to/myexamspace-preview1.png",
-      "path/to/myexamspace-preview2.png",
-      "path/to/myexamspace-preview3.png"
-		]
-      },
-      {
-        "name": "And More...",
-        "tagline": "Expanding to Meet Your Needs",
-        "description": "Our commitment is to continuously develop and expand the myschoolproject collection with more innovative apps designed to address the evolving challenges of school management.",
-        "link": "#",
-        "images": [
-      "path/to/myexamspace-preview1.png",
-      "path/to/myexamspace-preview2.png",
-      "path/to/myexamspace-preview3.png"
+      "image/mlogo.jpg",
+      "image/mlogo.jpg",
 		]
       }
     ]
