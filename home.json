@@ -1,39 +1,39 @@
 {
   "umbrellaProjectName": "MyschoolProject",
   "tagline": "",
-  "headerLogo": "", 
+  "headerLogo": "",
   "hero": {
-  "description": "myschoolproject is a unified suite of innovative applications designed to seamlessly integrate and automate every aspect of school management. From simplifying administrative tasks to enhancing teaching and learning, our interconnected software tools empower educators and transform educational institutions.",
-  "image": "image/mlogo.jpeg",
-  "callToAction": {
-    "text": "Explore Our Solutions",
-    "link": "#our-solutions"
-  }
-},
+    "description": "myschoolproject is a unified suite of innovative applications designed to seamlessly integrate and automate every aspect of school management. From simplifying administrative tasks to enhancing teaching and learning, our interconnected software tools empower educators and transform educational institutions.",
+    "image": "image/mlogo.jpeg",
+    "callToAction": {
+      "text": "Explore Our Solutions",
+      "link": "#our-solutions"
+    }
+  },
   "ourSolutions": {
     "title": "Our Growing Suite of Powerful Apps",
-    "description": "Built with the unique needs of schools in mind, <b>The MyschoolProject Collection</b> offers a range of tools to optimize various aspects of school management.",
+    "description": "Built with the unique needs of schools in mind, The MyschoolProject Collection offers a range of tools to optimize various aspects of school management.",
     "featuredApps": [
-  {
-    "name": "MyExamSpace",
-    "tagline": "Effortless Offline Exams & Auto-Grading",
-    "description": "Offline Examination Webapp , Built For Effortless accessment and Auto-Grading system with No Internet Required",
-    "link": "/myexamspace",
-    "images": [
-      "image/mxp1.jpg",
-      "image/mxp2.jpg",
-      "image/mxp3.jpg"
-    ]
-  },
-    {
+      {
+        "name": "MyExamSpace",
+        "tagline": "Effortless Offline Exams & Auto-Grading",
+        "description": "Offline Examination Webapp , Built For Effortless accessment and Auto-Grading system with No Internet Required",
+        "link": "/myexamspace",
+        "images": [
+          "image/mxp1.jpg",
+          "image/mxp2.jpg",
+          "image/mxp3.jpg"
+        ]
+      },
+      {
         "name": "Coming Soon: SchoolMeApp",
         "tagline": "A portal for school ",
         "description": "to be available in production soon...",
         "link": "#",
-       "images": [
-      "image/sm1.jpg",
-      "image/sm2.jpg"
-		]
+        "images": [
+          "image/sm1.jpg",
+          "image/sm2.jpg"
+        ]
       },
       {
         "name": "Stay Tuned in for more updates",
@@ -41,9 +41,11 @@
         "description": "Our commitment is to continuously develop and expand the MyschoolProject Collection with more innovative apps designed to address the evolving challenges of school management.",
         "link": "#",
         "images": [
-      "image/mlogo.jpg",
-      "image/mlogo.jpg",
-		]
+          "image/mlogo.jpg",
+          "image/mlogo.jpg"
+        ]
+      }
+    ]
   },
   "whyPartner": {
     "title": "Why Choose myschoolproject for Your School?",
