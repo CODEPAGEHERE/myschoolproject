@@ -4,6 +4,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #ffffff; /* Start with a white background */
+    background-image:
+        radial-gradient(circle, rgba(173, 216, 230, 0.15) 40%, transparent 60%), /* Larger, lighter blue */
+        radial-gradient(circle, rgba(135, 206, 235, 0.1) 30%, transparent 50%); /* Slightly smaller, darker */
+    background-size: 300px 300px, 250px 250px; /* Even larger sizes for fewer repeats */
+    background-position: 20% 30%, 70% 75%; /* More separated positions */
+    background-repeat: repeat;
+    min-height: 100vh;
 }
 
 .container {
@@ -14,10 +22,11 @@ body {
 
 
 
+
 /* Header Styles */
 header {
     background-color: #f8f9fa;
-    padding: 1.0rem 0;
+    padding: 0.7rem 0;
     border-bottom: 1px solid #eee;
     width: 90%;
     max-width:1100px;
