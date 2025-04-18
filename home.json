@@ -18,7 +18,7 @@
         "name": "MyExamSpace (Beta)",
         "tagline": "More Time Teaching, Less Time Grading: Offline Exams, Auto-Graded.",
         "description": "Reclaim valuable teaching time with MyExamSpace: the offline web application designed for effortless assessment , automatic marking and grading, no internet required.",
-        "link": "/myexamspace",
+        "link": "myexamspace.html",
         "images": [
           "image/mxp1.jpg",
           "image/mxp2.jpg",
@@ -29,7 +29,7 @@
         "name": "SchoolMeApp (Alpha)",
         "tagline": "All Your School Needs in One Easy Portal: Organize, Connect, and Manage with SchoolMeApp.",
         "description": "Coming soon! SchoolMeApp is currently in its early alpha phase, designed to be your comprehensive portal. Stay tuned for its production release, bringing you centralized tools to organize, connect, communicate, and efficiently manage all aspects of your school community for a more connected and efficient educational environment.",
-        "link": "/schoolme",
+        "link": "schoolme.html",
         "images": [
           "image/mlogo.jpeg",
           "image/mlogo.jpeg"

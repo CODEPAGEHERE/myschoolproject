@@ -1,0 +1,223 @@
+/* Basic Reset and Body Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Header Styles */
+header {
+    background-color: #f8f9fa;
+    padding: 1.0rem 0;
+    border-bottom: 1px solid #eee;
+    width: 90%;
+    max-width:1100px;
+    margin-left:150px;
+    margin-right:150px;
+}
+
+/* Target the container *inside* the header */
+header .container {
+    width: 90%; /* Adjust this percentage to control the inner width */
+    max-width: 800px; /* Keep your maximum width */
+    margin: 0 auto; /* Center the container */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    margin-right: 0.75rem;
+    height: 35px;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    padding: 0.6rem 0; /* Reduced vertical padding to make them appear smaller */
+    font-size: 0.9rem; /* Reduced font size */
+    font-weight: bold; /* Make the text bold */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-toggler-icon {
+    width: 1.7em;
+    height: 1.7em;
+    background-image: url('data:image/svg+xml,%3csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath stroke=\'rgba(0, 0, 0, 0.5)\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3e%3c/svg%3e');
+}
+
+/* Responsive adjustments (example for small screens) - Adjust if needed */
+@media (max-width: 768px) {
+    header .container {
+        width: 100%; /* Full width on smaller screens */
+        padding: 0 15px; /* Add some padding on the sides */
+    }
+
+    .navbar-collapse {
+        display: none;
+        width: 100%;
+        background-color: #f8f9fa;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 0.75rem;
+    }
+
+    .nav-link {
+        font-size: 1rem; /* Adjust for smaller screens if needed */
+    }
+}
+
+
+
+
+/* Hero Section Styles */
+.hero {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.hero .lead {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+.hero .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.hero .btn-outline-secondary {
+    background-color: transparent;
+    color: #6c757d;
+    border: 1px solid #6c757d;
+}
+
+.hero .btn-outline-secondary:hover {
+    background-color: #545b62;
+    color: #fff;
+    border-color: #545b62;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments (example for small screens) */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        display: none; /* Hide menu by default on small screens */
+        width: 100%;
+        background-color: #f8f9fa;
+        padding: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-collapse.show {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero .row {
+        flex-direction: column-reverse; /* Image above text on small screens */
+        text-align: center;
+    }
+
+    .hero .col-md-6:first-child {
+        margin-top: 2rem;
+    }
+}
