@@ -29,7 +29,7 @@
         "name": "SchoolMeApp (Alpha)",
         "tagline": "All Your School Needs in One Easy Portal: Organize, Connect, and Manage with SchoolMeApp.",
         "description": "Coming soon! SchoolMeApp is currently in its early alpha phase, designed to be your comprehensive portal. Stay tuned for its production release, bringing you centralized tools to organize, connect, communicate, and efficiently manage all aspects of your school community for a more connected and efficient educational environment.",
-        "link": "schoolme.html",
+        "link": "comingsoon.html",
         "images": [
           "image/mlogo.jpeg",
           "image/mlogo.jpeg"
@@ -90,7 +90,7 @@
   "faq": [
     {
       "question": "What are the key features of MySchoolProject?",
-      "answer": "MySchoolProject offers a suite of applications for school management, including tools for exams, communication, administration, and more, all designed to integrate seamlessly."
+      "answer": "MySchoolProject offers a suite of applications for school management, including tools like MyExamSpace for exams, Shoolme for School Portal, communication and administrative control, all designed to work together  seamlessly."
     },
     {
       "question": "Is there a cost to use MySchoolProject?",
