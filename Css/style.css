@@ -175,11 +175,12 @@ header {
 
 
 
+
 .image-gallery-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    position: relative; /* For positioning flowing images */
-    overflow: hidden; /* To contain flowing images if needed */
+    padding-top: 6rem; /* Adjust top padding */
+    padding-bottom: 6rem; /* Adjust bottom padding */
+    position: relative; /* For positioning floating images */
+    overflow: hidden; /* To contain potential overflows */
 }
 
 .image-gallery-section .container {
@@ -190,71 +191,440 @@ header {
     align-items: center; /* Vertically center if needed */
 }
 
-/* Flowing Images (Left and Right) */
-.flowing-image {
+/* Floating Images (Left and Right Graphics) */
+.floating-image {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1; /* Place behind the central stack */
-    opacity: 0.7; /* Optional: Make them a bit translucent */
+    top: 20%; /* Adjust vertical position */
+    transform: translateY(-50%) rotate(-10deg); /* Adjust rotation */
+    opacity: 0.8;
+    z-index: 0; /* Place behind the central stack */
+    max-width: 150px; /* Adjust size */
+    height: auto;
 }
 
-.flowing-image.left {
-    left: -10%; /* Adjust position as needed */
-    max-width: 30%; /* Adjust size as needed */
+.floating-image.left {
+    left: 5%; /* Adjust horizontal position */
 }
 
-.flowing-image.right {
-    right: -10%; /* Adjust position as needed */
-    max-width: 30%; /* Adjust size as needed */
+.floating-image.right {
+    right: 5%; /* Adjust horizontal position */
+    transform: translateY(-50%) rotate(10deg); /* Opposite rotation */
 }
 
-//* Central Image Stack - Horizontal with Vertical Overlap and Bigger */
+/* Central Image Stack */
 .central-image-stack {
     display: flex;
-    align-items: center; /* Vertically align the rectangles */
-    justify-content: center; /* Horizontally center the rectangles */
-    width: auto; /* Adjust width based on content */
-    /* max-width: 800px; /* Optional: Limit max width of the stack */ */
+    align-items: flex-end; /* Align items to the bottom for the stack effect */
+    justify-content: center; /* Center horizontally */
+    width: auto;
+    padding: 20px; /* Add some padding around the stack */
 }
 
 .central-image-stack .rectangle {
     margin: 0 -20px; /* Negative horizontal margin for overlap */
-    border: 2px solid #ccc; /* Example border style */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-    width: 120px; /* Example width for side rectangles */
-    height: 100px; /* Example height for side rectangles */
-    position: relative; /* For z-index */
+    border: 2px solid #87ceeb; /* Example border color */
+    /* Optional: Gradient border */
+    /* border-image: linear-gradient(to right, #87ceeb, #4682b4); */
+    /* border-image-slice: 1; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 180px; /* Adjust width */
+    height: 200px; /* Adjust base height */
+    position: relative;
+    border-radius: 8px; /* Optional: rounded corners */
 }
 
 .central-image-stack .rectangle.tall {
-    height: 160px; /* Example height for the tall one */
+    height: 400px; /* Adjust taller height */
     z-index: 2; /* Ensure it's on top */
+    margin-bottom: 0; /* Reset potential bottom margin */
+	background-color:white;
+	width:400px;
 }
 
 .central-image-stack .rectangle.side {
-    z-index: 1; /* Place them below the tall one initially */
-}
-
-.central-image-stack .rectangle.side.left-side {
-    transform: translateY(10px); /* Example: move down slightly */
-}
-
-.central-image-stack .rectangle.side.right-side {
-    transform: translateY(20px); /* Example: move down more */
+	 height: 300px; 
+    z-index: 1;
+    margin-bottom: 20px; /* Push up slightly due to bottom alignment */
+	background-color:white;
+	width:300px;
 }
 
 .central-image-stack .rectangle img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio, may crop */
-    border-radius: 5px; /* Optional: rounded corners */
+    object-fit: cover;
+    border-radius: inherit; /* Inherit rounded corners */
 }
 
-/* Adjust container to center the stack */
-.image-gallery-section .container {
+
+.desc{
+	text-align:center;
+	color:black;
+	font-size:30px;
+}
+
+
+.features-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: #f9faff; /* Light background */
+    position: relative; /* For absolute positioning of abstract graphics */
+    overflow: hidden; /* To contain potential overflows */
+}
+
+.features-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center; /* Center the central stack */
-    align-items: center; /* Vertically center if needed */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space out features and visual */
+}
+
+/* Features List (Left Side) */
+.features-list {
+    width: 45%; /* Adjust width as needed */
+}
+
+.features-list .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.features-list .icon {
+    width: 50px; /* Adjust icon size */
+    height: 50px;
+    margin-right: 1.5rem;
+    /* Style your icon container if needed */
+}
+
+.features-list .icon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.features-list .description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.features-list .description p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Features Visual (Right Side - Outlined Area) */
+.features-visual {
+    width: 50%; /* Adjust width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-visual .outlined-area {
+    width: 80%; /* Adjust size of outlined area */
+    height: 400px; /* Adjust height of outlined area */
+    border: 2px solid #87ceeb; /* Example outline color */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #87ceeb; /* Placeholder text color */
+    font-size: 1.2rem;
+    /* Add background or other styles for the content area */
+}
+
+
+
+
+/* Abstract Graphic Elements */
+.abstract-graphic {
+    position: absolute;
+    opacity: 0.6; /* Adjust opacity */
+    /* Adjust size and other common properties */
+}
+
+.abstract-graphic img {
+    max-width: 80px; /* Adjust size */
+    height: auto;
+}
+
+.abstract-graphic.top-left {
+    top: 5%;
+    left: 5%;
+}
+
+.abstract-graphic.top-right {
+    top: 10%;
+    right: 5%;
+}
+
+.abstract-graphic.bottom-left {
+    bottom: 10%;
+    left: 10%;
+}
+
+.abstract-graphic.bottom-right {
+    bottom: 5%;
+    right: 10%;
+}
+
+.more-tools-banner {
+    background-color: #1e3a8a; /* Dark blue background */
+    color: #fff; /* White text color */
+    padding-top: 6rem; /* Adjust top padding to accommodate logos */
+    padding-bottom: 4rem;
+    position: relative; /* For absolute positioning of icons */
+    overflow: hidden;
+}
+
+/* Partner Logos Section */
+.partner-logos-container {
+    display: flex;
+    justify-content: center; /* Center the logos horizontally */
+    gap: 30px; /* Space between logos */
+    position: absolute;
+    top: -40px; /* Position above the banner */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure they are above the banner */
+}
+
+.partner-logos-container .partner-logo {
+    background-color: rgba(255, 255, 255, 0.15); /* Glass effect background */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Further glass effect */
+}
+
+.partner-logos-container .partner-logo img {
+    max-height: 40px; /* Adjust logo size */
+    vertical-align: middle;
+}
+
+.more-tools-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem; /* Add some padding inside the container */
+    position: relative; /* To ensure banner content is above logos if needed */
+    z-index: 5;
+}
+
+/* Rest of the CSS for banner content and icons remains the same */
+.more-tools-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.more-tools-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.more-tools-banner p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.more-tools-banner .banner-buttons a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.more-tools-banner .banner-buttons .btn-primary {
+    background-color: #63b3ed; /* Lighter blue for primary button */
+    color: #fff;
+    border: none;
+}
+
+.more-tools-banner .banner-buttons .btn-outline-light {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+/* Banner Icons */
+.more-tools-banner .banner-icon {
+    position: absolute;
+    opacity: 0.4; /* Adjust opacity */
+    /* Adjust size as needed */
+}
+
+.more-tools-banner .banner-icon img {
+    max-width: 80px; /* Adjust size */
+    height: auto;
+}
+
+.more-tools-banner .banner-icon.top-left {
+    top: 10%;
+    left: 10%;
+    transform: rotate(-15deg);
+}
+
+.more-tools-banner .banner-icon.top-right {
+    top: 15%;
+    right: 10%;
+    transform: rotate(20deg);
+}
+
+.more-tools-banner .banner-icon.bottom-left {
+    bottom: 15%;
+    left: 15%;
+    transform: rotate(15deg);
+}
+
+.more-tools-banner .banner-icon.bottom-right {
+    bottom: 10%;
+    right: 15%;
+    transform: rotate(-20deg);
+}
+
+
+
+
+
+
+.site-footer {
+    background-color: #111; /* Dark background */
+    color: #eee; /* Light text color */
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    border-radius: 20px 20px 0 0; /* Rounded top corners */
+}
+
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around; /* Distribute content evenly */
+    padding: 2rem;
+    border-bottom: 1px solid #333; /* Separator line */
+    margin-bottom: 1rem;
+}
+
+.site-footer .footer-logo-social,
+.site-footer .footer-contact,
+.site-footer .footer-powered-by {
+    text-align: center;
+}
+
+/* Logo and Social Links */
+.site-footer .footer-logo-social .logo img {
+    max-height: 50px; /* Adjust logo size */
+    margin-bottom: 1rem;
+}
+
+.site-footer .footer-logo-social .social-links a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.site-footer .footer-logo-social .social-links a:hover {
+    opacity: 1;
+}
+
+.site-footer .footer-logo-social .social-links img {
+    max-height: 25px; /* Adjust social icon size */
+}
+
+/* Contact Information */
+.site-footer .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ddd;
+}
+
+.site-footer .footer-contact p {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.site-footer .footer-contact a.btn {
+    display: inline-block;
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.site-footer .footer-contact a.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Powered By */
+.site-footer .footer-powered-by h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ddd;
+}
+
+.site-footer .footer-powered-by .partners img {
+    max-height: 30px; /* Adjust partner logo size */
+    margin: 0 0.5rem;
+    vertical-align: middle;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.site-footer .footer-powered-by .partners img:hover {
+    opacity: 1;
+}
+
+/* Footer Bottom (Copyright and Links) */
+.site-footer .footer-bottom {
+    background-color: #000; /* Darker background */
+    color: #777;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.site-footer .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: none; /* Remove separator */
+    margin-bottom: 0;
+}
+
+.site-footer .footer-bottom .bottom-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.site-footer .footer-bottom .bottom-links li {
+    margin: 0 1rem;
+}
+
+.site-footer .footer-bottom .bottom-links a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.site-footer .footer-bottom .bottom-links a:hover {
+    color: #eee;
 }
