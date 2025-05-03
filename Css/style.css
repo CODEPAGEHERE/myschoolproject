@@ -19,213 +19,242 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-
-
-
-/* Header Styles */
+/* Header Styles (Adjusted Font Weight and Size) */
 header {
-    padding: 0.7rem 0;
-    border-bottom: 1px solid #eee;
-    width: 90%;
-    max-width:1100px;
-    margin-left:150px;
-    margin-right:150px;
-}
-
-/* Target the container *inside* the header */
-header .container {
-    width: 90%; /* Adjust this percentage to control the inner width */
-    max-width: 800px; /* Keep your maximum width */
-    margin: 0 auto; /* Center the container */
+    padding: 0.5rem 0; /* Slimmer vertical padding */
+    border-bottom: 2px solid #e9ecef; /* Optional: subtle bottom border */
+    max-width: 900px; /* Maximum width */
+    margin: 0 auto; /* Center the header horizontally */
+    padding-left: 2rem; /* Increased left margin */
+    padding-right: 2rem; /* Increased right margin */
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out logo and navigation */
     align-items: center;
+    padding: 0; /* Remove default navbar padding */
+    height: 20px;
 }
 
 .navbar-brand {
     display: flex;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 4rem; /* Increased brand name font size */
     font-weight: bold;
-    color: #2c3e50;
+    color: #212529;
     text-decoration: none;
 }
 
+.brand {
+	font-size:35px;
+
+}
+
 .navbar-brand img {
-    margin-right: 0.75rem;
-    height: 35px;
+    margin-right: 0.5rem;
+    height: auto; /* Adjust icon height based on text */
+    max-height: 2.5rem; /* Increased maximum icon height */
 }
 
 .navbar-nav {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     display: flex;
+    align-items: center;
+    height: auto; /* Allow height to adjust to content */
 }
 
 .nav-item {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #555;
-    padding: 0.6rem 0; /* Reduced vertical padding to make them appear smaller */
-    font-size: 0.9rem; /* Reduced font size */
-    font-weight: bold; /* Make the text bold */
-    transition: color 0.3s ease;
+    color: black;
+    padding: 0.5rem 0; /* Adjust vertical padding for links */
+    font-size: 0.9rem;
+    line-height: 1; /* Ensure line height doesn't add extra space */
+    display: flex; /* Use flex to control alignment within the link */
+    align-items: center; /* Vertically align text within the link */
+    height: auto; /* Allow height to adjust to text */
+    font-weight: bold; /* Make navigation links bold */
 }
 
 .nav-link:hover {
-    color: #3498db;
+    color: #007bff;
 }
 
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end; /* Push navigation to the right */
+    align-items: center;
+    height: auto; /* Allow height to adjust to content */
+}
+
+/* Hide the default navbar toggler */
 .navbar-toggler {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none;
+    display: none !important;
 }
 
-.navbar-toggler-icon {
-    width: 1.7em;
-    height: 1.7em;
-    background-image: url('data:image/svg+xml,%3csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath stroke=\'rgba(0, 0, 0, 0.5)\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3e%3c/svg%3e');
-}
-
-/* Responsive adjustments (example for small screens) - Adjust if needed */
-@media (max-width: 768px) {
-    header .container {
-        width: 100%; /* Full width on smaller screens */
-        padding: 0 15px; /* Add some padding on the sides */
-    }
-
-    .navbar-collapse {
-        display: none;
-        width: 100%;
-        background-color: #f8f9fa;
-        padding: 1rem;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-    }
-
-    .navbar-collapse.show {
-        display: block;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-item {
-        margin-left: 0;
-        margin-bottom: 0.75rem;
-    }
-
-    .nav-link {
-        font-size: 1rem; /* Adjust for smaller screens if needed */
-    }
+/* Container adjustments - let header control margins */
+.container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: 0; /* Remove container's default left padding */
+    padding-right: 0; /* Remove container's default right padding */
 }
 
 
-
-
-/* Hero Section Styles */
 .hero {
-    padding: 4rem 0;
-    background-color: #fff;
+    display: flex;
+    justify-content: center; /* Center the text wrapper horizontally */
+    align-items: center; /* Center the text wrapper vertically */
+    min-height: 70vh;
+    padding: 4rem 2rem; /* Add some padding around the hero */
+    position: relative; /* Needed for absolute positioning of images */
+    overflow: hidden; /* To contain any potential image overflow */
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.hero .container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center; /* Center text within the wrapper */
+}
+
+.hero-content-wrapper h1 {
+    font-size: 3.5rem;
     font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
     color: #333;
-    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
 }
 
-.hero .lead {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
+.hero-content-wrapper p.lead {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2.5rem;
 }
 
-.hero .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
+.hero-content-wrapper .mt-4 a {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem;
+    margin: 0 0.75rem;
+    font-weight: bold;
 }
 
-.hero .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
+/* Image positioning */
+.hero-image {
+    position: absolute;
+    /* Adjust sizes and other common properties */
 }
 
-.hero .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+.hero-image.left {
+    left: 20%; /* Adjust as needed */
+    bottom: 90px; /* Adjust as needed */
+    /* Add size constraints */
 }
 
-.hero .btn-outline-secondary {
-    background-color: transparent;
-    color: #6c757d;
-    border: 1px solid #6c757d;
+.hero-image.center.top {
+    top: 70px; /* Adjust as needed */
+    left: 20%;
+    transform: translateX(-50%); /* Center horizontally */
+    /* Add size constraints */
 }
 
-.hero .btn-outline-secondary:hover {
-    background-color: #545b62;
-    color: #fff;
-    border-color: #545b62;
+.hero-image.right {
+    right: 20px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    /* Add size constraints */
 }
 
-.hero img {
-    max-width: 100%;
-    height: auto;
+
+
+.image-gallery-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    position: relative; /* For positioning flowing images */
+    overflow: hidden; /* To contain flowing images if needed */
 }
 
-/* Responsive adjustments (example for small screens) */
-@media (max-width: 768px) {
-    .navbar-collapse {
-        display: none; /* Hide menu by default on small screens */
-        width: 100%;
-        background-color: #f8f9fa;
-        padding: 1rem;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+.image-gallery-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center the central stack */
+    align-items: center; /* Vertically center if needed */
+}
 
-    .navbar-collapse.show {
-        display: block;
-    }
+/* Flowing Images (Left and Right) */
+.flowing-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1; /* Place behind the central stack */
+    opacity: 0.7; /* Optional: Make them a bit translucent */
+}
 
-    .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.flowing-image.left {
+    left: -10%; /* Adjust position as needed */
+    max-width: 30%; /* Adjust size as needed */
+}
 
-    .nav-item {
-        margin-left: 0;
-        margin-bottom: 0.5rem;
-    }
+.flowing-image.right {
+    right: -10%; /* Adjust position as needed */
+    max-width: 30%; /* Adjust size as needed */
+}
 
-    .hero .row {
-        flex-direction: column-reverse; /* Image above text on small screens */
-        text-align: center;
-    }
+//* Central Image Stack - Horizontal with Vertical Overlap and Bigger */
+.central-image-stack {
+    display: flex;
+    align-items: center; /* Vertically align the rectangles */
+    justify-content: center; /* Horizontally center the rectangles */
+    width: auto; /* Adjust width based on content */
+    /* max-width: 800px; /* Optional: Limit max width of the stack */ */
+}
 
-    .hero .col-md-6:first-child {
-        margin-top: 2rem;
-    }
+.central-image-stack .rectangle {
+    margin: 0 -20px; /* Negative horizontal margin for overlap */
+    border: 2px solid #ccc; /* Example border style */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    width: 120px; /* Example width for side rectangles */
+    height: 100px; /* Example height for side rectangles */
+    position: relative; /* For z-index */
+}
+
+.central-image-stack .rectangle.tall {
+    height: 160px; /* Example height for the tall one */
+    z-index: 2; /* Ensure it's on top */
+}
+
+.central-image-stack .rectangle.side {
+    z-index: 1; /* Place them below the tall one initially */
+}
+
+.central-image-stack .rectangle.side.left-side {
+    transform: translateY(10px); /* Example: move down slightly */
+}
+
+.central-image-stack .rectangle.side.right-side {
+    transform: translateY(20px); /* Example: move down more */
+}
+
+.central-image-stack .rectangle img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio, may crop */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Adjust container to center the stack */
+.image-gallery-section .container {
+    display: flex;
+    justify-content: center; /* Center the central stack */
+    align-items: center; /* Vertically center if needed */
 }
