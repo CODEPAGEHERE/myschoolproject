@@ -498,133 +498,23 @@ header {
 
 
 
+/*Footer styled ... */
 
-.site-footer {
-    background-color: #111; /* Dark background */
-    color: #eee; /* Light text color */
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-    border-radius: 20px 20px 0 0; /* Rounded top corners */
+.padd {
+    background-color: #000 !important;
+    color: #eee;
+    padding: 20px; /* Consistent padding inside the footer */
+    border-radius: 20px ; /* Rounded top corners */
+    margin-top: 3rem; /* Space above the footer */
+    margin-left: 20px; /* Force left margin */
+    margin-right: 20px; /* Force right margin */
+    margin-bottom: 2rem; /* Add some space below the footer as well */
+    width: calc(100% - 40px); /* Ensure the width accounts for the left and right margins */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.site-footer .container {
+.padd .container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-around; /* Distribute content evenly */
-    padding: 2rem;
-    border-bottom: 1px solid #333; /* Separator line */
-    margin-bottom: 1rem;
-}
-
-.site-footer .footer-logo-social,
-.site-footer .footer-contact,
-.site-footer .footer-powered-by {
-    text-align: center;
-}
-
-/* Logo and Social Links */
-.site-footer .footer-logo-social .logo img {
-    max-height: 50px; /* Adjust logo size */
-    margin-bottom: 1rem;
-}
-
-.site-footer .footer-logo-social .social-links a {
-    display: inline-block;
-    margin: 0 0.5rem;
-    opacity: 0.7;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.site-footer .footer-logo-social .social-links a:hover {
-    opacity: 1;
-}
-
-.site-footer .footer-logo-social .social-links img {
-    max-height: 25px; /* Adjust social icon size */
-}
-
-/* Contact Information */
-.site-footer .footer-contact h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #ddd;
-}
-
-.site-footer .footer-contact p {
-    margin-bottom: 0.3rem;
-    font-size: 0.9rem;
-}
-
-.site-footer .footer-contact a.btn {
-    display: inline-block;
-    background-color: #007bff; /* Blue button color */
-    color: #fff;
-    padding: 0.7rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
-
-.site-footer .footer-contact a.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Powered By */
-.site-footer .footer-powered-by h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #ddd;
-}
-
-.site-footer .footer-powered-by .partners img {
-    max-height: 30px; /* Adjust partner logo size */
-    margin: 0 0.5rem;
-    vertical-align: middle;
-    opacity: 0.8;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.site-footer .footer-powered-by .partners img:hover {
-    opacity: 1;
-}
-
-/* Footer Bottom (Copyright and Links) */
-.site-footer .footer-bottom {
-    background-color: #000; /* Darker background */
-    color: #777;
-    padding: 1rem 0;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-.site-footer .footer-bottom .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    border-bottom: none; /* Remove separator */
-    margin-bottom: 0;
-}
-
-.site-footer .footer-bottom .bottom-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.site-footer .footer-bottom .bottom-links li {
-    margin: 0 1rem;
-}
-
-.site-footer .footer-bottom .bottom-links a {
-    color: #777;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.site-footer .footer-bottom .bottom-links a:hover {
-    color: #eee;
+    /* Container will center content within the padded footer */
 }
