@@ -1,8 +1,6 @@
----
-
 # MySchoolProject
 
-**Code.Page.12=>** <br>
+**CodePage:** 12
 **Version:** 7.1  
 **Last Update:** 23 April 2025  
 **Live Location:** [MySchoolProject Website](https://myschoolproject-xi.vercel.app)
