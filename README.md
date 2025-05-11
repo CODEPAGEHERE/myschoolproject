@@ -15,7 +15,7 @@ MySchoolProject is a **promotional website** designed to showcase a collection o
 ## Features
 - 🖼️ **Interactive Design:** User-friendly interface built with modern web technologies.
 - 🚀 **Optimized Performance:** Fast and responsive layout for seamless browsing.
-- 📂 **App Showcase:** A curated collection of our team's apps with descriptions and links.
+- 📂 **App Showcase:** A curated collection of our team's MySchoolProject apps with descriptions and links.
 - 🎨 **Visual Effects:** Engaging animations powered by **GSAP** and more.
 
 ---
@@ -54,14 +54,14 @@ Include a license here if applicable, or specify if the project is proprietary.
 
 ## Acknowledgments
 
-- 🎉 Thanks to the team members who contributed their creativity and development skills.
+- 🎉 Thanks to the Happycode and Graphitie team members who contributed their creativity and development skills.
 - 💡 Special thanks to the users who provided valuable feedback on our apps.
 
 ---
 
 ## Notes
 - **Domain Name:** Add a custom domain for improved branding in the future.
-- **Backend & Database:** Consider implementing backend functionality and a database for dynamic content management.
+
 
 ---
 

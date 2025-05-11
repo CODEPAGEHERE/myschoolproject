@@ -4,12 +4,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ffffff; /* Start with a white background */
+    background-color: #ffffff;
     background-image:
-        radial-gradient(circle, rgba(173, 216, 230, 0.15) 40%, transparent 60%), /* Larger, lighter blue */
-        radial-gradient(circle, rgba(135, 206, 235, 0.1) 30%, transparent 50%); /* Slightly smaller, darker */
-    background-size: 300px 300px, 250px 250px; /* Even larger sizes for fewer repeats */
-    background-position: 20% 30%, 70% 75%; /* More separated positions */
+        radial-gradient(circle, rgba(173, 216, 230, 0.15) 40%, transparent 60%),
+        radial-gradient(circle, rgba(135, 206, 235, 0.1) 30%, transparent 50%);
+    background-size: 300px 300px, 250px 250px;
+    background-position: 20% 30%, 70% 75%;
     background-repeat: repeat;
     min-height: 100vh;
 }
@@ -19,83 +19,175 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-/* Header Styles (Adjusted Font Weight and Size) */
+
 header {
-    padding: 0.5rem 0; /* Slimmer vertical padding */
-    border-bottom: 2px solid #e9ecef; /* Optional: subtle bottom border */
-    max-width: 900px; /* Maximum width */
-    margin: 0 auto; /* Center the header horizontally */
-    padding-left: 2rem; /* Increased left margin */
-    padding-right: 2rem; /* Increased right margin */
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #e9ecef;
+    max-width: 900px; /* Keep for desktop */
+    margin: 0 auto; /* Keep for desktop centering */
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space out logo and navigation */
+    justify-content: space-between;
     align-items: center;
-    padding: 0; /* Remove default navbar padding */
-    height: 20px;
+    padding: 0;
+    height: 20px; /* This height might be too restrictive, consider removing it or adjusting responsively */
 }
 
 .navbar-brand {
     display: flex;
     align-items: center;
-    font-size: 4rem; /* Increased brand name font size */
+    font-size: 4rem; /* Keep your current brand font size */
     font-weight: bold;
     color: #212529;
     text-decoration: none;
 }
 
 .brand {
-	font-size:35px;
-
+    font-size: 35px; /* Keep your specific brand text size */
 }
 
 .navbar-brand img {
     margin-right: 0.5rem;
-    height: auto; /* Adjust icon height based on text */
-    max-height: 2.5rem; /* Increased maximum icon height */
+    height: auto;
+    max-height: 2.5rem; /* Keep your current logo height */
 }
 
 .navbar-nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex; /* Keep for desktop horizontal layout */
     align-items: center;
-    height: auto; /* Allow height to adjust to content */
+    height: auto;
 }
 
 .nav-item {
-    margin-left: 1rem;
+    margin-left: 1rem; /* Keep for desktop horizontal spacing */
 }
 
 .nav-link {
     text-decoration: none;
-    color: black;
-    padding: 0.5rem 0; /* Adjust vertical padding for links */
-    font-size: 0.9rem;
-    line-height: 1; /* Ensure line height doesn't add extra space */
-    display: flex; /* Use flex to control alignment within the link */
-    align-items: center; /* Vertically align text within the link */
-    height: auto; /* Allow height to adjust to text */
-    font-weight: bold; /* Make navigation links bold */
+    color: black; /* Keep your current link color */
+    padding: 0.5rem 0;
+    font-size: 0.9rem; /* Keep your current link font size */
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    height: auto;
+    font-weight: bold; /* Keep your current link font weight */
 }
 
 .nav-link:hover {
-    color: #007bff;
+    color: #007bff; /* Keep your hover color */
 }
 
 .navbar-collapse {
-    display: flex;
-    justify-content: flex-end; /* Push navigation to the right */
+    display: flex; /* Keep for desktop horizontal layout */
+    justify-content: flex-end; /* Keep for desktop right alignment */
     align-items: center;
-    height: auto; /* Allow height to adjust to content */
+    height: auto;
 }
 
-/* Hide the default navbar toggler */
+/* Hide the default navbar toggler on desktop */
 .navbar-toggler {
     display: none !important;
+}
+
+
+/* --- Mobile Styles (Below 992px) --- */
+@media (max-width: 991.98px) {
+    header {
+        max-width: 100%; /* Allow header to go closer to full width on mobile */
+        margin: 0; /* Remove auto margin for centering on mobile */
+        padding: 0.5rem 1rem; /* Adjust padding for mobile sides */
+    }
+
+    .container {
+        width: 100%; /* Allow container to use full width within header padding */
+        padding: 0; /* Remove container's default padding if header has padding */
+    }
+
+    .navbar {
+        height: auto; /* Allow navbar height to adjust for mobile layout */
+        padding: 0.5rem 0; /* Add some padding back to the navbar itself */
+    }
+
+    .navbar-brand {
+        font-size: 2rem; /* Adjust brand font size for smaller screens */
+    }
+
+    .brand {
+        font-size: 25px; /* Adjust specific brand text size for mobile */
+    }
+
+     .navbar-brand img {
+        max-height: 2rem; /* Adjust logo size for mobile */
+     }
+
+
+    .navbar-toggler {
+        display: block !important; /* Show the toggler on mobile */
+        padding: .25rem .75rem; /* Default Bootstrap toggler padding */
+        font-size: 1.25rem; /* Default Bootstrap toggler icon size */
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid rgba(0,0,0,.1); /* Example border */
+        border-radius: .25rem; /* Example border radius */
+    }
+
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        content: "";
+        background: no-repeat center center;
+        background-size: 100% 100%;
+        /* You might need to set a background-image for the icon if not using Bootstrap's default */
+        /* background-image: url("data:image/svg+xml;..."); */
+    }
+
+
+    .navbar-collapse {
+        display: none; /* Hide the collapsed content by default on mobile */
+        flex-grow: 1;
+        align-items: center; /* Re-center items for the collapsed view */
+        width: 100%; /* Take full width when collapsed */
+        /* Style for when it's *shown* by Bootstrap's JS */
+        &.show {
+            display: block; /* Show the collapsed content when active */
+        }
+    }
+
+
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Take full width */
+        margin-top: 0.5rem; /* Add some space above the stacked nav items */
+    }
+
+    .nav-item {
+        margin-left: 0; /* Remove desktop left margin */
+        margin-bottom: 5px; /* Add space between stacked items */
+        width: 100%; /* Make each nav item take full width */
+    }
+
+    .nav-link {
+        padding: 10px 15px; /* Adjust padding for stacked links */
+        text-align: left; /* Align text to the left in the stacked menu */
+        /* Ensure color, font-size, font-weight are inherited or re-applied if needed */
+        color: black; /* Explicitly re-apply if necessary */
+        font-size: 1rem; /* Slightly larger font size for mobile links */
+        font-weight: bold; /* Explicitly re-apply if necessary */
+    }
+
+    .navbar-collapse.justify-content-end {
+        justify-content: center !important; /* Center items in the collapsed menu */
+    }
 }
 
 /* Container adjustments - let header control margins */
@@ -337,48 +429,42 @@ header {
     /* Add background or other styles for the content area */
 }
 
-
-
-
-/* Abstract Graphic Elements */
-.abstract-graphic {
-    position: absolute;
-    opacity: 0.6; /* Adjust opacity */
-    /* Adjust size and other common properties */
+.features-visual .outlined-area img{
+    width: 80%; /* Adjust size of outlined area */
+    height: 400px; /* Adjust height of outlined area */
+    border: 2px solid #87ceeb; /* Example outline color */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #87ceeb; /* Placeholder text color */
+    font-size: 1.2rem;
+    /* Add background or other styles for the content area */
 }
 
-.abstract-graphic img {
-    max-width: 80px; /* Adjust size */
-    height: auto;
-}
 
-.abstract-graphic.top-left {
-    top: 5%;
-    left: 5%;
-}
 
-.abstract-graphic.top-right {
-    top: 10%;
-    right: 5%;
-}
 
-.abstract-graphic.bottom-left {
-    bottom: 10%;
-    left: 10%;
-}
-
-.abstract-graphic.bottom-right {
-    bottom: 5%;
-    right: 10%;
-}
-
+/* More Tools styles*/
+/* More Tools Banner Section */
 .more-tools-banner {
     background-color: #1e3a8a; /* Dark blue background */
     color: #fff; /* White text color */
     padding-top: 6rem; /* Adjust top padding to accommodate logos */
     padding-bottom: 4rem;
     position: relative; /* For absolute positioning of icons */
-    overflow: hidden;
+    overflow: hidden; /* To contain potential overflows */
+    border-radius: 10px; /* Optional: Add border-radius to the banner itself */
+    margin: 3rem 20px; /* Add margin to sides and top/bottom */
+}
+
+.more-tools-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem; /* Add some padding inside the container */
+    position: relative; /* To ensure banner content is above logos if needed */
+    z-index: 5; /* Ensure banner content is above logos */
 }
 
 /* Partner Logos Section */
@@ -387,10 +473,12 @@ header {
     justify-content: center; /* Center the logos horizontally */
     gap: 30px; /* Space between logos */
     position: absolute;
-    top: -40px; /* Position above the banner */
+    top: 50px; /* Position above the banner - adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10; /* Ensure they are above the banner */
+    z-index: 50; /* Ensure they are above the banner */
+	margin-bottom:50px;
+	
 }
 
 .partner-logos-container .partner-logo {
@@ -400,43 +488,44 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px); /* Further glass effect */
+    display: flex; /* Use flex to center image vertically */
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+	width:250px;
+	height:150px;
 }
 
 .partner-logos-container .partner-logo img {
-    max-height: 40px; /* Adjust logo size */
+    max-height: 100px; /* Adjust logo size */
     vertical-align: middle;
 }
 
-.more-tools-banner .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2rem; /* Add some padding inside the container */
-    position: relative; /* To ensure banner content is above logos if needed */
-    z-index: 5;
-}
-
-/* Rest of the CSS for banner content and icons remains the same */
-.more-tools-banner h2 {
+/* Banner Content */
+.more-tools-banner .banner-content h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     font-weight: 400;
 }
 
-.more-tools-banner h1 {
+.more-tools-banner .banner-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
-.more-tools-banner p {
+.more-tools-banner .banner-content p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
     opacity: 0.8;
 }
 
-.more-tools-banner .banner-buttons a {
+/* Banner Buttons */
+.more-tools-banner .banner-buttons {
+    /* text-align: center; Handled by container */
+}
+
+.more-tools-banner .banner-buttons a.btn {
     display: inline-block;
     padding: 1rem 2rem;
     margin: 0 10px;
@@ -444,6 +533,7 @@ header {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for hover */
 }
 
 .more-tools-banner .banner-buttons .btn-primary {
@@ -452,16 +542,28 @@ header {
     border: none;
 }
 
+.more-tools-banner .banner-buttons .btn-primary:hover {
+    background-color: #4682b4; /* Darker blue on hover */
+}
+
+
 .more-tools-banner .banner-buttons .btn-outline-light {
     border: 2px solid #fff;
     color: #fff;
     background-color: transparent;
 }
 
+.more-tools-banner .banner-buttons .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+    color: #fff;
+}
+
+
 /* Banner Icons */
 .more-tools-banner .banner-icon {
     position: absolute;
     opacity: 0.4; /* Adjust opacity */
+    z-index: 0; /* Place behind banner content */
     /* Adjust size as needed */
 }
 
@@ -493,7 +595,6 @@ header {
     right: 15%;
     transform: rotate(-20deg);
 }
-
 
 
 
