@@ -81,7 +81,7 @@
     "phone": ""
   },
   "footer": {
-    "copyright": "Copyright © 2025 MySchoolProject; All rights reserved. | HappyCode Technologies & Graphitie.",
+    "copyright": "Copyright © 2025 MySchoolProject; All rights reserved. | Happycode Technologies & Graphitie.",
     "links": [
       {"text": "Privacy Policy", "link": "/privacy"},
       {"text": "Terms of Service", "link": "/terms"}
@@ -90,7 +90,7 @@
   "faq": [
     {
       "question": "What are the key features of MySchoolProject?",
-      "answer": "MySchoolProject offers a suite of applications for school management, including tools like MyExamSpace for exams, ShoolMe as School Portal, communication and administrative control, all designed to work together  seamlessly."
+      "answer": "MySchoolProject offers a suite of applications for school management, including tools like MyExamSpace for exams, SchoolMe for School Portal, communication and administrative control, all designed to work together  seamlessly."
     },
     {
       "question": "Is there a cost to use MySchoolProject?",
