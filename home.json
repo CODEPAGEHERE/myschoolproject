@@ -26,9 +26,9 @@
         ]
       },
       {
-        "name": "SchoolMeApp (Alpha)",
-        "tagline": "All Your School Needs in One Easy Portal: Organize, Connect, and Manage with SchoolMeApp.",
-        "description": "Coming soon! SchoolMeApp is currently in its early alpha phase, designed to be your comprehensive portal. Stay tuned for its production release, bringing you centralized tools to organize, connect, communicate, and efficiently manage all aspects of your school community for a more connected and efficient educational environment.",
+        "name": "SchoolMe (Alpha)",
+        "tagline": "All Your School Needs in One Easy Portal: Organize, Connect, and Manage with Our Powerful Portal",
+        "description": "Coming soon! SchoolMe is currently in its early alpha phase, designed to be your comprehensive portal. Stay tuned for its production release, bringing you centralized tools to organize, connect, communicate, and efficiently manage all aspects of your school community for a more connected and efficient educational environment.",
         "link": "comingsoon.html",
         "images": [
           "2icons/box.svg",
@@ -41,8 +41,8 @@
         "description": "Our commitment is to continuously develop and expand the MyschoolProject Collection with more innovative apps designed to address the evolving challenges of school management.",
         "link": "#",
         "images": [
-          "image/mlogo.jpeg",
-          "image/mlogo.jpeg"
+         "2icons/box.svg",
+          "2icons/box.svg"
         ]
       }
     ]
@@ -90,7 +90,7 @@
   "faq": [
     {
       "question": "What are the key features of MySchoolProject?",
-      "answer": "MySchoolProject offers a suite of applications for school management, including tools like MyExamSpace for exams, Shoolme for School Portal, communication and administrative control, all designed to work together  seamlessly."
+      "answer": "MySchoolProject offers a suite of applications for school management, including tools like MyExamSpace for exams, ShoolMe as School Portal, communication and administrative control, all designed to work together  seamlessly."
     },
     {
       "question": "Is there a cost to use MySchoolProject?",
