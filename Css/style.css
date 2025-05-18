@@ -848,3 +848,167 @@ header {
 		 .about-section .text-center img{
            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Increased shadow intensity */
         }
+  .about-section .reviews-section{
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            margin-top: 60px;
+        }
+
+        .about-section .reviews-section h3{
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-section .reviews-section .review-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scroll-padding: 0 50px;
+            gap: 20px;
+        }
+
+        .about-section .reviews-section .review-carousel .review-item {
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 80%;
+            margin: 0 auto;
+            scroll-snap-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #666;
+        }
+
+       .about-section .reviews-section .review-item blockquote{
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+       }
+       .about-section .reviews-section .review-item .reviewer-name{
+            margin-top: 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #2c3e50;
+       }
+
+        @media (min-width: 768px) {
+            .about-section .reviews-section .review-carousel .review-item {
+                max-width: 60%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .about-section .reviews-section .review-carousel .review-item {
+                max-width: 50%;
+            }
+        }
+
+        .about-section .reviews-section .review-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .about-section .reviews-section .review-carousel {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+		
+		
+		 .about-section .pricing-section {
+            padding: 60px 20px;
+            margin-top: 60px;
+        }
+
+        .about-section .pricing-section h3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .about-section .pricing-section .pricing-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .about-section .pricing-section .pricing-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 320px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-section .pricing-section .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-section .pricing-section .pricing-card h4 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .about-section .pricing-section .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 25px;
+        }
+
+        .about-section .pricing-section .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .about-section .pricing-section .pricing-card ul li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .about-section .pricing-section .pricing-card .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+        }
+
+        .about-section .pricing-section .pricing-card .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (min-width: 992px) {
+            .about-section .pricing-section .pricing-cards {
+                flex-wrap: nowrap;
+            }
+        }
