@@ -29,10 +29,10 @@
                         <a class="nav-link" href="myexamspace.html">MyExamSpace</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about-us">About Product</a>
+                        <a class="nav-link" href="about.html">About Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/support">Support/HelpDesk</a>
+                        <a class="nav-link" href="/support">HelpDesk</a>
                     </li>
                 </ul>
             </div>
@@ -79,96 +79,106 @@
     </div>
 </section>
 
-<section id="myexamspace" class="bg-white py-16 px-4">
+<section id="myexamspace" class="py-16 px-4 overflow-hidden" style="margin-top: 2rem; margin-bottom: 2rem;">
     <div class="container mx-auto">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2">
                 <h2 class="text-3xl font-semibold text-blue-700 mb-4">
                     INTRODUCING MYEXAMSPACE
                 </h2>
-                <p class="text-gray-600 text-lg">
-                    MyExamSpace is a cutting-edge offline tool designed to streamline and
-                    simplify the management of examinations. It provides a robust
-                    solution for educators to create, administer, and analyze exams
-                    without the need for an internet connection.
+                 <p class="text-gray-600 text-lg">
+                    MyExamSpace is a cutting-edge examination web application designed to streamline and simplify all aspects of the examination process.  This robust, offline-capable solution empowers educators to efficiently create, administer, and analyze examinations, even without internet connectivity.
                 </p>
             </div>
-            <div class="md:w-1/2">
-                <img src="img/exam.jpg" alt="MyExamSpace Interface" class="rounded-lg shadow-lg w-full">
+            <div class="md:w-1/2 flex justify-center">
+                <img
+                    src="img/startexam.jpg"
+                    alt="MyExamSpace Interface"
+                    class="rounded-lg shadow-xl"
+                    style="display: block; max-width: 80%; margin: 0 auto; box-sizing: border-box;
+                           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+                           filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));"
+                />
             </div>
         </div>
     </div>
 </section>
 
 
-<section class="features-section py-5">
+
+<section class="features-section py-5" style="margin-top: 3rem; margin-bottom: 3rem;">
     <div class="container">
-        <div class="features-list">
-            <div class="feature-item">
-                <div class="icon">
-                    <img src="images/online-exam-builder-icon.svg" alt="Online Exam Builder">
-                </div>
-                <div class="description">
-                    <h3>Online Exam Builder</h3>
-                    <p>Create exams in minutes</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <div class="icon">
-                    <img src="images/instant-grading-icon.svg" alt="Instant Grading">
-                </div>
-                <div class="description">
-                    <h3>Instant Grading</h3>
-                    <p>Save hours of manual work</p>
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-lg feature-card">
+                    <div class="card-body d-flex flex-column align-items-start justify-content-start p-4">
+                        <i class="bi bi-wifi-off text-primary h2 feature-icon"></i>
+                        <h3 class="card-title h5 mb-2 feature-title">Offline Examination</h3>
+                        <p class="card-text feature-text">
+                            Conduct exams without relying on an internet connection.  Students can take tests even in areas with limited or no connectivity, and their results will be saved locally until a connection is available.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-item">
-                <div class="icon">
-                    <img src="images/progress-analytics-icon.svg" alt="Progress Analytics">
-                </div>
-                <div class="description">
-                    <h3>Progress Analytics</h3>
-                    <p>Track student performance over time</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <div class="icon">
-                    <img src="images/mobile-friendly-icon.svg" alt="Mobile Friendly">
-                </div>
-                <div class="description">
-                    <h3>Mobile Friendly</h3>
-                    <p>Accessible on any device</p>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-lg feature-card">
+                    <div class="card-body d-flex flex-column align-items-start justify-content-start p-4">
+                        <i class="bi bi-hand-thumbs-up-fill text-primary h2 feature-icon"></i>
+                        <h3 class="card-title h5 mb-2 feature-title">User-Friendly</h3>
+                        <p class="card-text feature-text">
+                            Our platform is designed to be intuitive and easy to navigate, minimizing the learning curve for both educators and students.  The clean interface and straightforward workflows ensure a smooth experience.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-item">
-                <div class="icon">
-                    <img src="images/safe-secure-icon.svg" alt="Safe & Secure">
-                </div>
-                <div class="description">
-                    <h3>Safe & Secure</h3>
-                    <p>Built for student data privacy</p>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-lg feature-card">
+                    <div class="card-body d-flex flex-column align-items-start justify-content-start p-4">
+                        <i class="bi bi-box text-primary h2 feature-icon"></i>
+                        <h3 class="card-title h5 mb-2 feature-title">Exam Mode</h3>
+                        <p class="card-text feature-text">
+                           Enable a focused testing environment by minimizing distractions.  Exam mode locks down the student's device, restricting access to other applications and websites, ensuring the integrity of the assessment.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="features-visual">
-            <div class="outlined-area">
-			<img src="image/shot.jpg" alt="">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-lg feature-card">
+                    <div class="card-body d-flex flex-column align-items-start justify-content-start p-4">
+                        <i class="bi bi-check2-circle text-primary h2 feature-icon"></i>
+                        <h3 class="card-title h5 mb-2 feature-title">Instant Grading</h3>
+                        <p class="card-text feature-text">
+                           Get immediate results and eliminate the need for manual grading.  Our system automatically grades quizzes and exams, providing students with instant feedback and saving educators valuable time.  Go paper-free and reduce administrative overhead.
+                        </p>
+                    </div>
                 </div>
-        </div>
-        <div class="abstract-graphic top-left">
-            <img src="images/abstract-top-left.svg" alt="">
-        </div>
-        <div class="abstract-graphic top-right">
-            <img src="images/abstract-top-right.svg" alt="">
-        </div>
-        <div class="abstract-graphic bottom-left">
-            <img src="images/abstract-bottom-left.svg" alt="">
-        </div>
-        <div class="abstract-graphic bottom-right">
-            <img src="images/abstract-bottom-right.svg" alt="">
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-lg feature-card">
+                    <div class="card-body d-flex flex-column align-items-start justify-content-start p-4">
+                        <i class="bi bi-shield-lock-fill text-primary h2 feature-icon"></i>
+                        <h3 class="card-title h5 mb-2 feature-title">Safe & Secure</h3>
+                        <p class="card-text feature-text">
+                            We prioritize the security of your data.  Our platform employs robust security measures to protect student information and ensure the integrity of the examination process.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-lg feature-card">
+                    <div class="card-body d-flex flex-column align-items-start justify-content-start p-4">
+                        <i class="bi bi-phone-fill text-primary h2 feature-icon"></i>
+                        <h3 class="card-title h5 mb-2 feature-title">Mobile Friendly</h3>
+                        <p class="card-text feature-text">
+                           Students can access and take exams on any device, including smartphones and tablets.  Our platform adapts to different screen sizes, providing a consistent and user-friendly experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 
 
@@ -176,10 +186,10 @@
 <section class="more-tools-banner py-5">
     <div class="partner-logos-container">
         <div class="partner-logo glass">
-            <img src="image/graph.png" alt="Partner Logo 1">
+            <img src="img/graph.png" alt="Partner Logo 1">
         </div>
         <div class="partner-logo glass">
-            <img src="image/hcode.png" alt="Partner Logo 2">
+            <img src="img/hcode.png" alt="Partner Logo 2">
         </div>
     </div>
     <div class="container" style="margin-top:150px;">
@@ -192,18 +202,6 @@
                 <a href="/contact-us" class="btn btn-outline-light">Contact Us</a>
             </div>
         </div>
-        <div class="banner-icon top-left">
-            <img src="images/tools-icon-top-left.svg" alt="">
-        </div>
-        <div class="banner-icon top-right">
-            <img src="images/tools-icon-top-right.svg" alt="">
-        </div>
-        <div class="banner-icon bottom-left">
-            <img src="images/tools-icon-bottom-left.svg" alt="">
-        </div>
-        <div class="banner-icon bottom-right">
-            <img src="images/tools-icon-bottom-right.svg" alt="">
-        </div>
     </div>
 </section>
 
@@ -214,8 +212,8 @@
         <div class="row">
             <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start mb-3 mb-md-0">
                 <div class="mb-2">
-                    <img src="2icons/box.svg" alt="MySchoolProject Logo" height="30">
-					<h3>M.E.S</h3>
+                    <img src="img/mxplogo1.png" alt="MySchoolProject Logo" height="30">
+					<h3>MyExamSpace</h3>
                 </div>
                 <div class="d-flex">
                     <a href="#" class="text-white-50 mr-2"><i class="bi bi-box"></i></a>
@@ -237,8 +235,8 @@
             <div class="col-md-3">
                 <h5>Brought to you By</h5>
                 <div class="d-flex align-items-center">
-                    <img src="image/hcode.png" alt="Happy Code Logo" height="50" class="mr-2">
-                    <img src="image/graph.png" alt="Graphitie Logo" height="50">
+                    <img src="img/hcode.png" alt="Happy Code Logo" height="50" class="mr-2">
+                    <img src="img/graph.png" alt="Graphitie Logo" height="50">
                 </div>
             </div>
             <div class="col-md-3 text-md-right text-center">
