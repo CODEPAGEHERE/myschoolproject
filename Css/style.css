@@ -80,7 +80,7 @@ header {
 
 .nav-link {
   text-decoration: none;
-  color: black;
+  color: blue;
   padding: 0.5rem 0;
   font-size: 0.9rem;
   line-height: 1;
@@ -220,10 +220,7 @@ header {
 
 
 
-
-
-
-
+/* Hero section style */
 
 .hero {
     display: flex;
@@ -289,6 +286,42 @@ header {
     transform: translateY(-50%); /* Center vertically */
     /* Add size constraints */
 }
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 2rem 1rem;
+    min-height: auto;
+    flex-wrap: nowrap; /* keep your flex layout, no wrap */
+  }
+
+  .hero-content-wrapper h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content-wrapper p.lead {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content-wrapper .mt-4 a {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    margin: 0.3rem 0.5rem;
+  }
+
+  /* Keep images absolutely positioned but smaller */
+  .hero-image {
+    max-width: 80px !important;
+    /* keep position, just scale size */
+  }
+}
+
+
+
+
+
+
+
 
 
 
