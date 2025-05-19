@@ -220,8 +220,9 @@ header {
 
 
 
-/* Hero section style */
 
+
+/* HERO SECTION STYLE */
 .hero {
     display: flex;
     justify-content: center; /* Center the text wrapper horizontally */
@@ -323,99 +324,182 @@ header {
 
 
 
-
+/*RECTANGLE SECTION STYLE*/
 
 
 .image-gallery-section {
-    padding-top: 6rem; /* Adjust top padding */
-    padding-bottom: 6rem; /* Adjust bottom padding */
-    position: relative; /* For positioning floating images */
-    overflow: hidden; /* To contain potential overflows */
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .image-gallery-section .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: center; /* Center the central stack */
-    align-items: center; /* Vertically center if needed */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Floating Images (Left and Right Graphics) */
 .floating-image {
     position: absolute;
-    top: 20%; /* Adjust vertical position */
-    transform: translateY(-50%) rotate(-10deg); /* Adjust rotation */
+    top: 20%;
+    transform: translateY(-50%) rotate(-10deg);
     opacity: 0.8;
-    z-index: 0; /* Place behind the central stack */
-    max-width: 120px; /* Adjust size */
+    z-index: 0;
+    max-width: 120px;
     height: auto;
 }
 
 .floating-image.left {
-    left: 2%; /* Adjust horizontal position */
-	top:50px;
-	
+    left: 2%;
+    top: 50px;
 }
 
 .floating-image.right {
-    right: 1%; /* Adjust horizontal position */
-	bottom:150px;
-    transform: translateY(-50%) rotate(10deg); /* Opposite rotation */
+    right: 1%;
+    bottom: 150px;
+    transform: translateY(-50%) rotate(10deg);
 }
 
 /* Central Image Stack */
 .central-image-stack {
     display: flex;
-    align-items: flex-end; /* Align items to the bottom for the stack effect */
-    justify-content: center; /* Center horizontally */
+    align-items: flex-end;
+    justify-content: center;
     width: auto;
-    padding: 20px; /* Add some padding around the stack */
+    padding: 20px;
 }
 
 .central-image-stack .rectangle {
-    margin: 0 -20px; /* Negative horizontal margin for overlap */
-    border: 2px solid #87ceeb; /* Example border color */
-    /* Optional: Gradient border */
-    /* border-image: linear-gradient(to right, #87ceeb, #4682b4); */
-    /* border-image-slice: 1; */
+    margin: 0 -20px;
+    border: 2px solid #87ceeb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    width: 180px; /* Adjust width */
-    height: 200px; /* Adjust base height */
+    width: 180px;
+    height: 200px;
     position: relative;
-    border-radius: 8px; /* Optional: rounded corners */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .central-image-stack .rectangle.tall {
-    height: 350px; /* Adjust taller height */
-    z-index: 2; /* Ensure it's on top */
-    margin-bottom: 0; /* Reset potential bottom margin */
-	background-color:white;
-	width:400px;
+    height: 350px;
+    z-index: 2;
+    margin-bottom: 0;
+    background-color: white;
+    width: 400px;
 }
 
 .central-image-stack .rectangle.tall img {
- 
-	 object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: inherit;
 }
 
 .central-image-stack .rectangle.side {
-	 height: 300px; 
+    height: 300px;
     z-index: 1;
-    margin-bottom: 20px; /* Push up slightly due to bottom alignment */
-	background-color:white;
-	width:300px;
+    margin-bottom: 20px;
+    background-color: white;
+    width: 300px;
 }
-
 
 .central-image-stack .rectangle img {
     display: block;
     width: 100%;
     height: 100%;
-    max-height: 100%; /* Add this line */
+    max-height: 100%;
     object-fit: contain;
     border-radius: inherit;
 }
+
+/* Hover effect for desktop and larger screens */
+.central-image-stack .rectangle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+@media (max-width: 767.98px) {
+  .floating-image {
+    display: none;
+  }
+
+  .image-gallery-section .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .central-image-stack {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .central-image-stack .rectangle {
+    width: 100%;
+    max-width: 100%;
+    height: 300px; /* fixed height for consistency */
+    margin: 0;
+    position: relative;
+    border-width: 1.5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+  }
+
+  /* Overlap by pulling rectangles up */
+  .central-image-stack .rectangle:not(:first-child) {
+    margin-top: -150px; /* overlap by half height (adjust to match height above) */
+  }
+
+  .central-image-stack .rectangle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  /* Images inside rectangles */
+  .central-image-stack .rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill container without distortion */
+    display: block;
+    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .desc{
