@@ -20,86 +20,83 @@ body {
     margin: 0 auto;
 }
 
+
+/*  MYEXAMSPACE HEADER STYLE */
 header {
-    padding: 0.5rem 0;
-    border-bottom: 2px solid #e9ecef;
-    max-width: 900px; /* Keep for desktop */
-    margin: 0 auto; /* Keep for desktop centering */
-    padding-left: 2rem;
-    padding-right: 2rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #e9ecef;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    height: 20px; /* This height might be too restrictive, consider removing it or adjusting responsively */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    font-size: 4rem; /* Keep your current brand font size */
-    font-weight: bold;
-    color: #212529;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #212529;
+  text-decoration: none;
 }
 
 .brand {
-    font-size: 35px; /* Keep your specific brand text size */
-	
+  font-size: 35px;
 }
 
 .navbar-brand img {
-    margin-right: 0.2rem;
-    height: auto;
-    max-height: 2.5rem; /* Keep your current logo height */
+  margin-right: 0.2rem;
+  height: auto;
+  max-height: 2.5rem;
 }
 
 .navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Keep for desktop horizontal layout */
-    align-items: center;
-    height: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: auto;
 }
 
 .nav-item {
-    margin-left: 1rem; /* Keep for desktop horizontal spacing */
+  margin-left: 1rem;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: black; /* Keep your current link color */
-    padding: 0.5rem 0;
-    font-size: 0.9rem; /* Keep your current link font size */
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    height: auto;
-    font-weight: bold; /* Keep your current link font weight */
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: auto;
+  font-weight: bold;
 }
 
 .nav-link:hover {
-    color: #007bff; /* Keep your hover color */
+  color: #007bff;
 }
 
-.navbar-collapse {
-    display: flex; /* Keep for desktop horizontal layout */
-    justify-content: flex-end; /* Keep for desktop right alignment */
-    align-items: center;
-    height: auto;
-}
-
-/* Hide the default navbar toggler on desktop */
-.navbar-toggler {
-    display: none !important;
-}
 .navbar-nav .nav-link {
-  padding-right: 1rem;
   padding-left: 1rem;
+  padding-right: 1rem;
   color: #333;
   transition: color 0.3s ease;
 }
@@ -113,107 +110,110 @@ header {
   font-weight: bold;
 }
 
+/* Hide toggler on desktop */
+.navbar-toggler {
+  display: none !important;
+}
 
+/* Desktop navbar-collapse */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
 
-/* --- Mobile Styles (Below 992px) --- */
+/* Mobile styles */
 @media (max-width: 991.98px) {
-    header {
-        max-width: 100%; /* Allow header to go closer to full width on mobile */
-        margin: 0; /* Remove auto margin for centering on mobile */
-        padding: 0.5rem 1rem; /* Adjust padding for mobile sides */
-    }
-
-    .container {
-        width: 100%; /* Allow container to use full width within header padding */
-        padding: 0; /* Remove container's default padding if header has padding */
-    }
-
-    .navbar {
-        height: auto; /* Allow navbar height to adjust for mobile layout */
-        padding: 0.5rem 0; /* Add some padding back to the navbar itself */
-    }
-
-    .navbar-brand {
-        font-size: 2rem; /* Adjust brand font size for smaller screens */
-    }
-
-    .brand {
-        font-size: 25px; /* Adjust specific brand text size for mobile */
-    }
-
-     .navbar-brand img {
-        max-height: 2rem; /* Adjust logo size for mobile */
-     }
-
-
-    .navbar-toggler {
-        display: block !important; /* Show the toggler on mobile */
-        padding: .25rem .75rem; /* Default Bootstrap toggler padding */
-        font-size: 1.25rem; /* Default Bootstrap toggler icon size */
-        line-height: 1;
-        background-color: transparent;
-        border: 1px solid rgba(0,0,0,.1); /* Example border */
-        border-radius: .25rem; /* Example border radius */
-    }
-
-    .navbar-toggler-icon {
-        display: inline-block;
-        width: 1.5em;
-        height: 1.5em;
-        vertical-align: middle;
-        content: "";
-        background: no-repeat center center;
-        background-size: 100% 100%;
-        /* You might need to set a background-image for the icon if not using Bootstrap's default */
-        /* background-image: url("data:image/svg+xml;..."); */
-    }
-
-
-    .navbar-collapse {
-        display: none; /* Hide the collapsed content by default on mobile */
-        flex-grow: 1;
-        align-items: center; /* Re-center items for the collapsed view */
-        width: 100%; /* Take full width when collapsed */
-        /* Style for when it's *shown* by Bootstrap's JS */
-        &.show {
-            display: block; /* Show the collapsed content when active */
-        }
-    }
-
-
-    .navbar-nav {
-        flex-direction: column; /* Stack items vertically */
-        width: 100%; /* Take full width */
-        margin-top: 0.5rem; /* Add some space above the stacked nav items */
-    }
-
-    .nav-item {
-        margin-left: 0; /* Remove desktop left margin */
-        margin-bottom: 5px; /* Add space between stacked items */
-        width: 100%; /* Make each nav item take full width */
-    }
-
-    .nav-link {
-        padding: 10px 15px; /* Adjust padding for stacked links */
-        text-align: left; /* Align text to the left in the stacked menu */
-        /* Ensure color, font-size, font-weight are inherited or re-applied if needed */
-        color: black; /* Explicitly re-apply if necessary */
-        font-size: 1rem; /* Slightly larger font size for mobile links */
-        font-weight: bold; /* Explicitly re-apply if necessary */
-    }
-
-    .navbar-collapse.justify-content-end {
-        justify-content: center !important; /* Center items in the collapsed menu */
-    }
-}
-
-/* Container adjustments - let header control margins */
-.container {
-    width: 100%;
-    max-width: none;
+  header {
+    max-width: 100%;
     margin: 0;
-    padding-left: 0; /* Remove container's default left padding */
-    padding-right: 0; /* Remove container's default right padding */
+    padding: 0.5rem 1rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-brand {
+    font-size: 2rem;
+  }
+
+  .brand {
+    font-size: 25px;
+  }
+
+  .navbar-brand img {
+    max-height: 2rem;
+  }
+
+  /* Show toggler on mobile */
+  .navbar-toggler {
+    display: block !important;
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+  }
+
+  /* Bootstrap 4 default toggler icon */
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 30 30' " +
+      "xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' " +
+      "stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-grow: 1;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Show nav when toggled */
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 10px 15px;
+    text-align: left;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .navbar-collapse.justify-content-end {
+    justify-content: center !important;
+  }
 }
 
 
@@ -221,12 +221,8 @@ header {
 
 
 
-.hero {
-  padding-top: 80px; /* or adjust depending on your header height */
-  padding-bottom: 60px;
-  position: relative;
-  overflow: hidden; /* helps contain absolutely positioned animations */
-}
+
+
 
 
 .hero {
