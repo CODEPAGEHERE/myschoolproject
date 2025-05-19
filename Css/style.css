@@ -387,7 +387,6 @@ header {
     height: 350px;
     z-index: 2;
     margin-bottom: 0;
-    background-color: white;
     width: 400px;
 }
 
@@ -403,7 +402,6 @@ header {
     height: 300px;
     z-index: 1;
     margin-bottom: 20px;
-    background-color: white;
     width: 300px;
 }
 
