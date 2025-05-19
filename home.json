@@ -4,7 +4,7 @@
   "headerLogo": "",
   "hero": {
     "description": "MySchoolProject is a unified suite of innovative applications designed to seamlessly integrate and automate every aspect of school management. From simplifying administrative tasks to enhancing teaching and learning, our interconnected software tools empower educators and transform educational institutions.",
-    "image": "2icons/box.svg",
+    "image": "img/box.svg",
     "callToAction": {
       "text": "Explore Our Solutions",
       "link": "#our-solutions"

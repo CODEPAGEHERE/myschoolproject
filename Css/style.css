@@ -217,6 +217,18 @@ header {
 }
 
 
+
+
+
+
+.hero {
+  padding-top: 80px; /* or adjust depending on your header height */
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden; /* helps contain absolutely positioned animations */
+}
+
+
 .hero {
     display: flex;
     justify-content: center; /* Center the text wrapper horizontally */
