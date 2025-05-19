@@ -23,3 +23,31 @@ gsap.utils.toArray(".central-image-stack .rectangle").forEach(rect => {
     gsap.to(rect, { scale: 1, duration: 0.3, ease: "power1.out" });
   });
 });
+
+
+
+
+ gsap.from("#myexamspace .col-md-6", {
+    scrollTrigger: {
+      trigger: "#myexamspace",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.3
+  });
+
+  gsap.from(".myexamspace-img img", {
+    scrollTrigger: {
+      trigger: "#myexamspace",
+      start: "top 80%"
+    },
+    scale: 0.9,
+    opacity: 0,
+    duration: 1,
+    delay: 0.3,
+    ease: "power2.out"
+  });
