@@ -27,27 +27,50 @@ gsap.utils.toArray(".central-image-stack .rectangle").forEach(rect => {
 
 
 
- gsap.from("#myexamspace .col-md-6", {
+  // MyExamSpace Text
+gsap.from("#myexamspace .col-md-6:first-child", {
+  scrollTrigger: {
+    trigger: "#myexamspace",
+    start: "top 96%"
+  },
+  opacity: 0.9,
+  y: 15,
+  duration: 0.3,
+  ease: "power2.out"
+});
+
+// MyExamSpace Image
+gsap.from("#myexamspace img", {
+  scrollTrigger: {
+    trigger: "#myexamspace",
+    start: "top 96%"
+  },
+  opacity: 0.9,
+  scale: 0.98,
+  duration: 0.3,
+  ease: "power2.out"
+});
+
+
+//feature cards animate 
+gsap.from(".feature-card", {
     scrollTrigger: {
-      trigger: "#myexamspace",
-      start: "top 80%",
-      toggleActions: "play none none none"
+      trigger: ".features-section",
+      start: "top 85%",
     },
     opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: "power3.out",
-    stagger: 0.3
+    y: 30,
+    duration: 0.5,
+    stagger: 0.1,
+    ease: "power2.out"
   });
 
-  gsap.from(".myexamspace-img img", {
-    scrollTrigger: {
-      trigger: "#myexamspace",
-      start: "top 80%"
-    },
-    scale: 0.9,
-    opacity: 0,
-    duration: 1,
-    delay: 0.3,
-    ease: "power2.out"
+  // Hover animation using GSAP
+  document.querySelectorAll('.feature-card').forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, { scale: 1.04, duration: 0.25, ease: 'power1.out' });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { scale: 1, duration: 0.25, ease: 'power1.out' });
+    });
   });
