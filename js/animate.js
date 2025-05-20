@@ -74,3 +74,53 @@ gsap.from(".feature-card", {
       gsap.to(card, { scale: 1, duration: 0.25, ease: 'power1.out' });
     });
   });
+  
+  
+  
+  
+document.addEventListener('DOMContentLoaded', function () {
+  const marquee = document.querySelector('.marquee-content');
+  const container = document.querySelector('.marquee-container');
+
+  const fullWidth = marquee.scrollWidth;
+  const containerWidth = container.offsetWidth;
+
+  // GSAP Timeline
+  const tl = gsap.timeline({
+    repeat: -1,
+    defaults: { ease: 'none' }
+  });
+
+  tl.to(marquee, {
+    x: `-${fullWidth - containerWidth}px`,
+    duration: 40,
+  });
+
+  // Reverse on hover
+  container.addEventListener('mouseenter', () => tl.timeScale(-1));
+  container.addEventListener('mouseleave', () => tl.timeScale(1));
+
+  // Mobile drag support
+  let dragStartX = 0;
+  let dragOffsetX = 0;
+  let isDragging = false;
+
+  container.addEventListener('touchstart', function (e) {
+    isDragging = true;
+    dragStartX = e.touches[0].clientX;
+    tl.pause();
+  });
+
+  container.addEventListener('touchmove', function (e) {
+    if (!isDragging) return;
+    const deltaX = e.touches[0].clientX - dragStartX;
+    dragOffsetX = deltaX;
+    gsap.set(marquee, { x: `+=${deltaX}` });
+    dragStartX = e.touches[0].clientX;
+  });
+
+  container.addEventListener('touchend', function () {
+    isDragging = false;
+    tl.resume();
+  });
+});

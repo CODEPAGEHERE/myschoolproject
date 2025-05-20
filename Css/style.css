@@ -702,11 +702,6 @@ header {
 
 
 
-
-
-
-
-
 /*Footer styled ... */
 
 .padd {
@@ -726,4 +721,46 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     /* Container will center content within the padded footer */
+}
+
+
+/*ABOUT PRODUCT PAGE*/
+/*PRICING  CARD*/
+.rounded-lg {
+  border-radius: 1rem !important;
+}
+
+.card-body {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-body:hover {
+  transform: scale(1.02);
+}
+
+
+
+/*MARQUEE SLIDESHOW*/
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.marquee-content {
+  display: flex;
+  will-change: transform;
+}
+
+.marquee-img {
+  max-height: 220px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.marquee-img:hover {
+  transform: scale(1.05);
 }
