@@ -179,7 +179,7 @@ padding:0;
   width: 70.4px;
   height: 70.4px;
   --clr: rgb(0, 81, 253);
-  --clr-alpha: rgb(247, 197, 159, 0.1);
+  --clr-alpha: rgb(0, 81, 253, 0.1);
   animation: spinner 1.6s infinite ease;
   transform-style: preserve-3d;
 

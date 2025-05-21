@@ -3,12 +3,12 @@
 **CodePage:** 12.
 **Version:** 7.1  
 **Last Update:** 11 May 2025  
-**Live Location:** [MySchoolProject Website](https://myschoolproject-xi.vercel.app)
+**Live Location:** [MySchoolProject Website](https://myschoolproject-swart.vercel.app)
 
 ---
 
 ## Description
-MySchoolProject is a **promotional website** designed to showcase a collection of apps developed by our group. The platform highlights the creativity, teamwork, and innovation of the team, providing users with detailed insights and access to our applications.
+MySchoolProject is a promotional platform built to showcase the suite of applications developed under the MySchoolProject initiative. It highlights the creativity, collaboration, and innovation of our team, offering visitors a clear overview, feature insights, and direct access to our growing ecosystem of educational tools.
 
 ---
 
@@ -48,7 +48,8 @@ MySchoolProject is a **promotional website** designed to showcase a collection o
 
 ## License
 
-Include a license here if applicable, or specify if the project is proprietary.
+This project is proprietary and not open-source. All rights reserved by the MySchoolProject team.  
+You may not copy, distribute, or modify any part of this project without explicit permission.
 
 ---
 
@@ -60,7 +61,7 @@ Include a license here if applicable, or specify if the project is proprietary.
 ---
 
 ## Notes
-- **Domain Name:** Add a custom domain for improved branding in the future.
+- **Domain Name:** https://myschoolproject-swart.vercel.app
 
 
 ---
