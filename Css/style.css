@@ -764,3 +764,30 @@ header {
 .marquee-img:hover {
   transform: scale(1.05);
 }
+
+
+/*sUPPORT PAGE STYLE*/
+.contact-box {
+    transition: box-shadow 0.2s ease;
+  }
+
+  .contact-box:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  }
+
+  .form-control-sm::placeholder {
+    font-size: 0.85rem;
+    color: #aaa;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+
+  @media (max-width: 767.98px) {
+    .contact-box {
+      padding: 1.5rem;
+    }
+  }
