@@ -68,45 +68,60 @@
       <!-- Contact Form -->
       <div class="col-lg-6 mb-4">
         <div class="contact-box shadow-sm border-0 rounded p-4 bg-white h-100">
-         <form action="https://formspree.io/f/mjkydlpy" method="POST">
-            <div class="form-group">
-              <label for="name" class="small text-muted">Full Name</label>
-              <input type="text" id="name" class="form-control form-control-sm" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label for="email" class="small text-muted">Email Address</label>
-              <input type="email" id="email" class="form-control form-control-sm" placeholder="you@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="subject" class="small text-muted">Subject</label>
-              <input type="text" id="subject" class="form-control form-control-sm" placeholder="e.g. Technical Support">
-            </div>
-            <div class="form-group">
-              <label for="message" class="small text-muted">Message</label>
-              <textarea id="message" rows="4" class="form-control form-control-sm" placeholder="Write your message here..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-sm btn-block">Send Message</button>
-          </form>
+		<form action="https://formspree.io/f/mjkydlpy" method="POST">
+		  <div class="form-group">
+			<label for="name" class="small text-muted">Full Name</label>
+			<input type="text" id="name" name="name" class="form-control form-control-sm" placeholder="Your name" required>
+		  </div>
+		  <div class="form-group">
+			<label for="email" class="small text-muted">Email Address</label>
+			<input type="email" id="email" name="email" class="form-control form-control-sm" placeholder="you@example.com" required>
+		  </div>
+		  <div class="form-group">
+			<label for="subject" class="small text-muted">Subject</label>
+			<input type="text" id="subject" name="subject" class="form-control form-control-sm" placeholder="e.g. Technical Support">
+		  </div>
+		  <div class="form-group">
+			<label for="message" class="small text-muted">Message</label>
+			<textarea id="message" name="message" rows="4" class="form-control form-control-sm" placeholder="Write your message here..." required></textarea>
+		  </div>
+		  <button type="submit" class="btn btn-primary btn-sm btn-block">Send Message</button>
+		</form>
         </div>
       </div>
 
-      <!-- Contact Info -->
-      <div class="col-lg-5">
-        <div class="contact-box shadow-sm border-0 rounded p-4 bg-white h-100">
-          <h5 class="font-weight-bold mb-3">Contact Details</h5>
-          <ul class="list-unstyled small text-muted mb-4">
-            <li class="mb-2"><i class="bi bi-envelope-fill text-primary mr-2"></i> support@myschoolproject.org</li>
-            <li class="mb-2"><i class="bi bi-telephone-fill text-primary mr-2"></i> +234 816 948 5251</li>
-            <li class="mb-2"><i class="bi bi-whatsapp text-success mr-2"></i> +234 907 223 6203</li>
-          </ul>
-          <h6 class="font-weight-bold">Office Hours</h6>
-          <p class="small text-muted mb-3">Mon - Thurs: 9am – 5pm</p>
-          <a href="/book-demo" class="btn btn-outline-primary btn-sm">Book a Demo</a>
-        </div>
-      </div>
-    </div>
+     <!-- Contact Info -->
+<div class="col-lg-5">
+  <div class="contact-box shadow-sm border-0 rounded p-4 bg-white h-100 text-center">
+    <h5 class="font-weight-bold mb-3 text-dark" style="font-size: 1.4rem;">Get in Touch</h5>
+    
+    <ul class="list-unstyled mb-4" style="font-size: 1.05rem; font-weight: 500; color: #444;">
+      <li class="mb-3">
+        <i class="bi bi-envelope-fill text-primary mr-2"></i>
+        myschoolproject@happycode.com
+      </li>
+      <li class="mb-3">
+        <i class="bi bi-telephone-fill text-primary mr-2"></i>
+        +234 816 948 5251
+      </li>
+      <li class="mb-3">
+        <i class="bi bi-whatsapp text-success mr-2"></i>
+        +234 907 223 6203
+      </li>
+    </ul>
+
+    <h6 class="font-weight-bold text-dark" style="font-size: 1.1rem;">Office Hours</h6>
+    <p class="mb-4" style="font-size: 0.95rem; color: #555;">Monday – Thursday: 10:00 AM – 4:00 PM</p>
+	<p class="mb-4" style="font-size: 0.95rem; color: #555;">Friday – Sunday: 11:30 AM – 2:00 PM</p>
+	 
+    <a href="/support" class="btn btn-outline-primary btn-sm">
+      <i class="bi bi-calendar-check mr-1"></i> Book a Demo
+    </a>
   </div>
+</div>
 </section>
+
+
 
 <!-- Brochure Download -->
 <section class="py-5 text-center">
