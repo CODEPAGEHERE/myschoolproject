@@ -48,7 +48,7 @@ MySchoolProject is a promotional platform built to showcase the suite of applica
 
 ## License
 
-This project is proprietary and not open-source. All rights reserved by the MySchoolProject team.  
+This project is proprietary and not open-source. All rights reserved by the Happycode team.  
 You may not copy, distribute, or modify any part of this project without explicit permission.
 
 ---
