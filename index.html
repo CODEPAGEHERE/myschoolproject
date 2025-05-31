@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ umbrellaProjectName }}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- SEO Title & Description -->
+	<title>MySchoolProject – Smarter Tools for Nigerian Education</title>
+	<meta name="description" content="MySchoolProject promotes modern education tools like MyExamSpace to help Nigerian schools deliver smarter, easier exams and learning experiences.">
+
+	<!-- Open Graph (Social Media) -->
+	<meta property="og:title" content="MySchoolProject – Smarter Tools for Nigerian Education">
+	<meta property="og:description" content="Explore MyExamSpace and other innovative tools made for Nigerian schools and students.">
+	<meta property="og:image" content="https://myschoolproject-swart.vercel.app/img/preview.jpg"> <!-- Replace with actual image path -->
+	<meta property="og:url" content="https://myschoolproject-swart.vercel.app">
+	<meta property="og:type" content="website">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="MySchoolProject – Smarter Tools for Nigerian Education">
+	<meta name="twitter:description" content="Explore MyExamSpace and other innovative tools made for Nigerian schools and students.">
+	<meta name="twitter:image" content="https://myschoolproject-swart.vercel.app/img/preview.jpg"> <!-- Replace if different -->
+
+	<!-- Favicon and Styles -->
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
 
@@ -214,5 +233,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
 	 <script src="js/script.js"></script>
 	 <script src="js/load.js"></script>
+	 
+	 
+	 <!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="fixed-bottom bg-dark text-white p-3 d-none" style="z-index: 1050;">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <div class="mb-2 mb-md-0">
+      🍪 We use cookies to improve your experience and analyze traffic. By using this site, you agree to our 
+      <a href="/privacy" class="text-warning font-weight-bold">Privacy Policy</a>.
+    </div>
+    <button id="acceptCookies" class="btn btn-warning btn-sm ml-md-3">Accept</button>
+  </div>
+</div>
+
+<script>
+  // Show banner if consent not yet given
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookieConsent').classList.remove('d-none');
+  }
+
+  // Save consent and hide banner
+  document.getElementById('acceptCookies').addEventListener('click', function () {
+    localStorage.setItem('cookieConsent', 'true');
+    document.getElementById('cookieConsent').classList.add('d-none');
+  });
+</script>
+
 </body>
 </html>
