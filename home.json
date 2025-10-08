@@ -35,6 +35,16 @@
           "img/box.svg"
         ]
       },
+	  {
+        "name": "Resourc",
+        "tagline": "Providing Schools With the Required Tools",
+        "description": "Coming soon!",
+        "link": "resourc.html",
+        "images": [
+          "img/box.svg",
+          "img/box.svg"
+        ]
+      },
       {
         "name": "Stay Tuned In For Latest Update",
         "tagline": "Constantly Expanding to Meet Your Needs",
