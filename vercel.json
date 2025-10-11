@@ -1,14 +1,15 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/myexamspace", "destination": "myexamspace/myexamspace.html" },
+    { "source": "/myexamspace", "destination": "/myexamspace/myexamspace.html" },
     { "source": "/about", "destination": "/about.html" },
     { "source": "/support", "destination": "/support.html" },
-	{ "source": "/privacy", "destination": "/privacy.html" },
-	{ "source": "/terms", "destination": "/terms.html" },
-	{ "source": "/schoolme", "destination": "/comingsoon.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/schoolme", "destination": "/comingsoon.html" },
     { "source": "/404", "destination": "/404.html" }
   ],
   "redirects": [],
   "headers": []
 }
+                                                                                                                      
