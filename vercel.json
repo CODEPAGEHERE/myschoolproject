@@ -3,6 +3,7 @@
   "rewrites": [
     { "source": "/myexamspace", "destination": "/myexamspace/myexamspace.html" },
     { "source": "/about", "destination": "/about.html" },
+    { "source": "/resourc", "destination": "/resourc/resourc.html" },
     { "source": "/support", "destination": "/support.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/terms", "destination": "/terms.html" },
