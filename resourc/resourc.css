@@ -1,0 +1,325 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f9fafc;
+      color: #111;
+      scroll-behavior: smooth;
+    }
+
+    /* Glassmorphic Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(12px) saturate(160%);
+      -webkit-backdrop-filter: blur(12px) saturate(160%);
+      background-color: rgba(255, 255, 255, 0.25);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 5%;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #004aad;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #004aad;
+    }
+
+    .cta-btn {
+      background: linear-gradient(135deg, #004aad, #000);
+      color: #fff;
+      padding: 0.7rem 1.4rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #004aad;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    .hero a {
+      background: #004aad;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hero a:hover {
+      background: #000;
+    }
+
+    section {
+      padding: 5rem 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #004aad;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: #444;
+    }
+
+    .footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .feature-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+
+  .feature-card .icon {
+    font-size: 2.5rem;
+    color: #004aad;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    color: #111;
+    margin-bottom: 0.8rem;
+  }
+
+  .feature-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+
+  .about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.about-stats .stat h3 {
+  font-size: 2.5rem;
+  color: var(--primary-color, #0c8b72);
+  margin: 0;
+}
+
+.about-stats .stat p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+
+.access-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.access-content h2 {
+  font-size: 2rem;
+  color: #0a3d62;
+  margin-bottom: 10px;
+}
+
+.access-content p {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.access-form .form-group {
+  margin-bottom: 15px;
+}
+
+.access-form input,
+.access-form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.access-form input:focus,
+.access-form select:focus {
+  border-color: #0a3d62;
+  box-shadow: 0 0 8px rgba(10, 61, 98, 0.3);
+}
+
+.waitlist-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #007bff, #004aad);
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.waitlist-btn:hover {
+  background: linear-gradient(135deg, #004aad, #002e7a);
+}
+
+.form-message {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #0a3d62;
+  font-weight: 500;
+}
+
+/* Popup Glassmorphism */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #0a3d62;
+  max-width: 350px;
+  animation: slideUp 0.4s ease;
+}
+
+.popup-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.icon-input {
+  position: relative;
+}
+
+.icon-input .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.icon-input input,
+.icon-input select {
+  padding-left: 40px; /* make room for icon */
+}
