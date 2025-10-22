@@ -34,5 +34,5 @@ function scanDirectory(dir) {
   }
 }
 
-scanDirectory('./styles'); // Change this if your code lives elsewhere
+scanDirectory('./css'); // Change this if your code lives elsewhere
 console.log('✅ All colors are valid.');
