@@ -1,6 +1,6 @@
 
   const counters = document.querySelectorAll('.count');
-  const speed = 100; // Lower = faster
+  const speed = 120; // Lower = faster
 
   const animateCounters = () => {
     counters.forEach(counter => {
