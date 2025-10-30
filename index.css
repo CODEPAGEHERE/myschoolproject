@@ -49,78 +49,273 @@ a{ text-decoration:none; }
 
 /* Navbar shared rules */
 /* NAVBAR BEGINNING */
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:1030;
+/* ================= NAVBAR (Colorlib-authentic base + premium upgrades) ================= */
+
+/* CSS variables (assume already defined in index.css root) */
+/* --gold, --vibrant-cyan, --midnight-blue, etc. are used below */
+
+/* base header layout: starts transparent and floats slightly below top (TG-16 / HS-M) */
+:root {
+  --nav-start-gap-desktop: 16px;    /* TG-16 */
+  --nav-start-gap-tablet: 10px;
+  --nav-start-gap-mobile: 6px;
+  --nav-height-default: 90px;       /* starting nav 'visual' height */
+  --nav-height-scrolled: 75px;      /* H-S1 shrink target */
+  --nav-transition: 220ms;          /* shrink/fade timing (A style) */
 }
 
-/* base navbar look (transparent by default, will add class on scroll) */
-.navbar{
-  padding:1rem 0;
-  transition: background-color .28s ease, box-shadow .28s ease, padding .28s ease;
-  background:transparent;
-  border-bottom:0;
+/* Site header positioning:
+   Starts in overlay mode (transparent) with top gap on hero;
+   becomes fixed and solid when .scrolled is applied by JS.
+*/
+.site-header {
+  position: absolute;
+  top: var(--nav-start-gap-desktop);
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  pointer-events: auto;
+  transition: top var(--nav-transition) ease, box-shadow var(--nav-transition) ease;
 }
 
-/* brand */
-.brand-mark{
-  width:36px;
-  height:36px;
-  display:inline-block;
-  background: linear-gradient(135deg, var(--gold), var(--vibrant-cyan));
-  border-radius:8px;
-  box-shadow:var(--shadow-1);
-}
-.brand-text{
-  font-weight:700;
-  color:var(--gold);
-  font-family:'Quicksand', sans-serif;
+/* Make nav content horizontally laid out */
+.navbar {
+  width: 100%;
+  padding: calc((var(--nav-height-default) - 40px) / 2) 0; /* gives approximate 90px total height visual */
+  background: transparent;
+  transition: background 280ms ease, padding 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
-/* nav-links style and underline reveal */
-.navbar .nav-link{
-  color: rgba(19, 1, 1, 0.95);
-  font-weight:600;
-  position:relative;
+/* container inside navbar */
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 1rem;
+}
+
+/* Brand (BP-1) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  flex: 0 0 auto;
+}
+.brand-logo { width: 36px; height: 36px; display:block; }
+.brand-text {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: none;
+  letter-spacing: 1px;
+  white-space: nowrap;
+
+  /* GTD-1 & GC-2 gradient left→right (60% gold / 40% cyan) */
+  background: linear-gradient(90deg,
+    var(--gold) 0%,
+    var(--gold) 60%,
+    var(--vibrant-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  transition: background 220ms ease, color 220ms ease;
+}
+
+/* NAV LINKS - centered on desktop */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li { list-style:none; }
+.nav-link {
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: none; /* L3-A */
+  letter-spacing: 1.5px;
+  color: rgba(0,0,0,0.95);
+  position: relative;
+  padding: 6px 0;
+  display: inline-block;
   transition: color .25s ease;
 }
-.navbar .nav-link::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  height:3px;
-  width:0%;
-  background:var(--gold);
+/* underline reveal */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 3px;
+  width: 0%;
+  background: var(--gold);
+  border-radius: 2px;
   transition: width .28s cubic-bezier(.2,.9,.2,1);
-  border-radius:2px;
 }
-.navbar .nav-link:hover::after,
-.navbar .nav-link.active::after{ width:100%; }
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
 
-/* look when header is solid (we add .scrolled class with JS) */
-.site-header.scrolled .navbar{
-  background: linear-gradient(180deg, rgba(3,34,76,1) 0%, rgba(1,42,74,1) 100%);
-  padding: .6rem 0;
-  box-shadow: 0 8px 30px rgba(2,10,23,0.12);
+/* CTA button (desktop) */
+.nav-cta {
+  flex: 0 0 auto;
+  background: linear-gradient(90deg, var(--gold), var(--vibrant-cyan)); /* brand gradient as accent */
+  color: #091C38; /* navy-black for contrast */
+  padding: .45rem .95rem;
+  font-weight: 800;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform .18s ease, opacity .18s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+.nav-cta:hover { transform: translateY(-1px); opacity: .95; }
+
+/* MOBILE: hide desktop nav on small screens */
+@media (max-width: 992px) {
+  .nav-links, .nav-cta { display: none; }
+  .brand-text { font-size: 0.95rem; }
 }
 
-/* nav CTA button */
-.nav-cta{
-  background:var(--azure-blue);
-  color:var(--white);
+/* HAMBURGER (Colorlib-style H4 / MB-1A) */
+.hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  align-items:center;
+  justify-content:center;
+  cursor: pointer;
+  padding: 0.4rem;
+  flex: 0 0 auto;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2.6px;
+  background: var(--black);
+  border-radius: 2px;
+  transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .18s ease;
+  transform-origin: center;
+}
+.hamburger span + span { margin-top: 6px; }
+@media (max-width: 992px) {
+  .hamburger { display: flex; }
+}
+
+/* Mobile menu (drop-down under nav) */
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 8px);
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(2,10,23,0.06);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .36s ease, opacity .28s ease;
+  opacity: 0;
+  z-index: 1025;
+  border-radius: 10px;
+  margin: 0 1rem;
+}
+.mobile-menu ul {
+  margin: 0;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  list-style:none;
+}
+.mobile-menu a {
+  color: var(--black);
   font-weight:700;
-  padding:.45rem .9rem;
-  border-radius:8px;
-  border:none;
+  text-decoration:none;
+  text-transform: none;
 }
-.nav-cta:hover{ background:var(--prussian-blue); }
+.mobile-menu .mobile-cta {
+  display:block;
+  margin-top:.75rem;
+  background: var(--azure-blue);
+  color: #fff;
+  padding: .6rem;
+  border-radius: 8px;
+  text-align:center;
+}
 
-/* responsive tweaks */
-@media (max-width: 992px){
-  .brand-mark{ width:30px; height:30px; }
+/* Show mobile menu (toggle via JS adds .open) */
+.mobile-menu.open { max-height: 420px; opacity: 1; }
+
+/* Hamburger -> X animation when mobile menu active (MB-1A / classic) */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
+.hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(.2); }
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================= SCROLLED STATE (TS-A + SC-2b + C-3 strong gradient + SB-Fix-B-B + S3 effects) ================= */
+/* header when scrolled: becomes fixed and gets gradient background + shrink + shadow */
+.site-header.scrolled {
+  position: fixed; /* ensure it sticks to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1090;
+  transition: background 280ms ease, padding 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+/* navbar inner scrolled style: gradient background (Gold -> Vibrant Cyan) vertical (G-A) */
+.site-header.scrolled .navbar {
+  background: linear-gradient(to bottom, var(--gold) 0%, var(--vibrant-cyan) 100%);
+  padding: calc((var(--nav-height-scrolled) - 40px) / 2) 0; /* reduces height visually to ~75px (H-S1) */
+  box-shadow: 0 8px 30px rgba(2,10,23,0.18); /* SS-2 */
+  transform: scale(1);
+}
+
+/* brand text switches from gradient to solid gold on scroll (BT-C2) */
+.site-header.scrolled .brand-text {
+  background: none !important;
+  -webkit-text-fill-color: initial;
+  color: var(--gold);
+}
+
+/* adjust link color on scroll for contrast (dark->light or vice versa) */
+.site-header.scrolled .nav-link {
+  color: #ffffff;
+}
+.site-header.scrolled .nav-link::after { background: rgba(255,255,255,0.85); }
+
+/* CTA stays visible and contrasts on gradient - ensure good contrast */
+.site-header.scrolled .nav-cta { background: #ffffff; color: var(--navy-black); }
+
+/* FLOATING subtle shadow when at top (F1) */
+.site-header:not(.scrolled) .navbar {
+  box-shadow: 0 6px 20px rgba(2,10,23,0.06);
+}
+
+/* small responsive adjustments for hero-top gap (HS-M behaviour) */
+@media (min-width: 1025px) {
+  .site-header { top: var(--nav-start-gap-desktop); }
+  .site-header.scrolled { top: 0; }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .site-header { top: var(--nav-start-gap-tablet); }
+}
+@media (max-width: 767px) {
+  .site-header { top: var(--nav-start-gap-mobile); }
+  .mobile-menu { margin: 0.5rem; border-radius: 8px; }
+}
+
+/* Accessibility focus states */
+.nav-link:focus, .nav-cta:focus, .hamburger:focus { outline: 3px solid rgba(0,106,165,0.12); outline-offset: 2px; }
 
 /* NAVBAR ENDING */
 /* Footer base */
