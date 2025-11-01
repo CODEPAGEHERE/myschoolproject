@@ -1,0 +1,137 @@
+/* global.css — shared variables & base styles */
+
+/* Brand color variables */
+:root{
+  --navy-black: #091C38;
+  --midnight-blue: #03224C;
+  --prussian-blue: #012A4A;
+  --bright-midnight-blue: #013A63;
+  --azure-blue: #006AA5;
+  --light-gray-cyan: #CAF0F8;
+  --vibrant-cyan: #90E0EF;
+  --gold: #FFD700;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --success: #00B4D8;
+  --warning: #F9C74F;
+  --error: #D62828;
+  --neutral: #6C757D;
+
+  --container-max: 1200px;
+  --radius: 10px;
+  --shadow-1: 0 8px 30px rgba(2,10,23,0.09);
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Muli', 'Quicksand', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color:var(--black);
+  background:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* Container central width */
+.container{ width:92%; max-width:var(--container-max); margin:0 auto; }
+
+/* Links & buttons */
+a{ text-decoration:none; }
+.btn-primary{
+  background:var(--azure-blue);
+  border-color:var(--azure-blue);
+  color:var(--white);
+}
+.btn-primary:hover{ background:var(--prussian-blue); border-color:var(--prussian-blue); }
+
+/* Navbar shared rules */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1030;
+}
+
+/* base navbar look (transparent by default, will add class on scroll) */
+.navbar{
+  padding:1rem 0;
+  transition: background-color .28s ease, box-shadow .28s ease, padding .28s ease;
+  background:transparent;
+  border-bottom:0;
+}
+
+/* brand */
+.brand-mark{
+  width:36px;
+  height:36px;
+  display:inline-block;
+  background: linear-gradient(135deg, var(--gold), var(--vibrant-cyan));
+  border-radius:8px;
+  box-shadow:var(--shadow-1);
+}
+.brand-text{
+  font-weight:700;
+  color:var(--gold);
+  font-family:'Quicksand', sans-serif;
+}
+
+/* nav-links style and underline reveal */
+.navbar .nav-link{
+  color: rgba(19, 1, 1, 0.95);
+  font-weight:600;
+  position:relative;
+  transition: color .25s ease;
+}
+.navbar .nav-link::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  height:3px;
+  width:0%;
+  background:var(--gold);
+  transition: width .28s cubic-bezier(.2,.9,.2,1);
+  border-radius:2px;
+}
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after{ width:100%; }
+
+/* look when header is solid (we add .scrolled class with JS) */
+.site-header.scrolled .navbar{
+  background: linear-gradient(180deg, rgba(3,34,76,1) 0%, rgba(1,42,74,1) 100%);
+  padding: .6rem 0;
+  box-shadow: 0 8px 30px rgba(2,10,23,0.12);
+}
+
+/* nav CTA button */
+.nav-cta{
+  background:var(--azure-blue);
+  color:var(--white);
+  font-weight:700;
+  padding:.45rem .9rem;
+  border-radius:8px;
+  border:none;
+}
+.nav-cta:hover{ background:var(--prussian-blue); }
+
+/* Footer base */
+.site-footer{
+  background:var(--navy-black);
+  color:rgba(255,255,255,0.9);
+  padding:3rem 0 2rem;
+}
+.site-footer .footer-title{ color:var(--gold); font-weight:700; margin-bottom:.6rem; }
+.site-footer a{ color:var(--vibrant-cyan); }
+.site-footer a:hover{ color:var(--gold); }
+
+/* small utilities */
+.text-white-75{ color: rgba(255,255,255,0.75); }
+.bg-primary-dark{ background: linear-gradient(180deg, var(--bright-midnight-blue), var(--midnight-blue)); color: #fff; }
+
+/* responsive tweaks */
+@media (max-width: 992px){
+  .brand-mark{ width:30px; height:30px; }
+}
