@@ -7,6 +7,8 @@
 
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 
   <!-- Google Fonts (Quicksand + Muli) -->
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,59 +21,66 @@
 </head>
 <body>
 
+<!-- Loader Section -->
+<div id="loader">
+  <img src="img/box.svg" alt="Loading..." class="loader-logo">
+</div>
+
+
   <!-- Navbar (sticky + will change to solid on scroll) -->
  <!-- =============== NAVBAR START =============== -->
 <header class="site-header" id="siteHeader">
   <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container nav-content">
 
-      <!-- Brand (BP-1) -->
+    <!-- Brand container -->
+    <div class="navbar-brand">
       <a href="index.html" class="brand" aria-label="MySchool home">
         <img src="/img/box.svg" alt="MySchool Logo" class="brand-logo">
-        <span class="brand-text">School Suite</span>
+        <span class="brand-text">Eduverse Suite</span>
       </a>
+    </div>
 
-      <!-- Centered Nav Links (desktop) -->
+
+    
+    <!-- Nav links container -->
+    <div class="navbar-links">
       <ul class="nav-links" role="menubar" aria-label="Primary">
         <li role="none"><a role="menuitem" class="nav-link active" href="index.html">HOME</a></li>
-        <li role="none"><a role="menuitem" class="nav-link" href="#solution">About</a></li>
+        <li role="none"><a role="menuitem" class="nav-link" href="#solutions">About</a></li>
         <li role="none"><a role="menuitem" class="nav-link" href="apps/myexamspace/myexamspace.html">MyExamSpace</a></li>
         <li role="none"><a role="menuitem" class="nav-link" href="/apps/schoolme/schoolme.html">SchoolMe</a></li>
         <li role="none"><a role="menuitem" class="nav-link" href="#solutions">Solutions</a></li>
         <li role="none"><a role="menuitem" class="nav-link" href="/apps/pricing/pricing.html">Pricings</a></li>
         <li role="none"><a role="menuitem" class="nav-link" href="/apps/faq/faq.html">FAQ</a></li>
       </ul>
+    </div>
 
-      <!-- CTA (N2: CTA is last nav item on desktop; M-B: becomes a normal link on mobile) -->
-      <a href="/apps/pricing/pricing.html" class="nav-cta" id="navCta">BOOK A DEMO</a>
-
-      <!-- Hamburger (visible on mobile only) -->
+    <!-- Hamburger container -->
+    <div class="navbar-hamburger">
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
     </div>
-  </nav>
 
-  <!-- Mobile dropdown menu (MB-1A) - appears under navbar -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#solutions">About</a></li>
-      <li><a href="/apps/myexamspace/myexamspace.html">MyExamSpace</a></li>
-      <li><a href="/apps/schoolme/schoolme.html">SchoolMe</a></li>
-      <li><a href="#solutions">Solutions</a></li>
-      <li><a href="/apps/pricing/pricing.html">Pricing</a></li>
-      <li><a href="/apps/faq/faq.html">FAQ</a></li>
-      <!-- Mobile CTA becomes normal link (M-B) -->
-      <li><a href="book-demo.html" class="mobile-cta">Book a Demo</a></li>
-    </ul>
-  </div>
+    <!-- Mobile dropdown menu -->
+    <div class="navbar-mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#solutions">About</a></li>
+        <li><a href="/apps/myexamspace/myexamspace.html">MyExamSpace</a></li>
+        <li><a href="/apps/schoolme/schoolme.html">SchoolMe</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="/apps/pricing/pricing.html">Pricing</a></li>
+        <li><a href="/apps/faq/faq.html">FAQ</a></li>
+      </ul>
+    </div>
+
+  </nav>
 </header>
 <!-- =============== NAVBAR END =============== -->
 
 
-  <!-- HERO (Colorlib-style full-width with overlay) -->
+  <!-- HERO -->
   <section class="hero-section">
     <div class="hero-bg" role="img" aria-label="Students and technology collage (hero)"></div>
     <div class="hero-overlay"></div>
@@ -158,7 +167,7 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="solution-card p-4 h-100 d-flex flex-column">
-            <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828d9b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8b" alt="MyExamSpace" class="mb-3 img-fluid rounded">
+            <img src="/img/apple.jpeg" alt="MyExamSpace" class="mb-3 img-fluid rounded">
             <h5 class="mb-2">MyExamSpace</h5>
             <p class="text-muted small flex-grow-1">Mock exams, automated marking and dashboards.</p>
             <a href="myexamspace.html" class="mt-3 btn btn-outline-primary align-self-start">Open MyExamSpace</a>
@@ -176,7 +185,7 @@
 
         <div class="col-md-4">
           <div class="solution-card p-4 h-100 d-flex flex-column">
-            <img src="https://images.unsplash.com/photo-1526059033258-6b2b8f78b0f7?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=66" alt="Resourc" class="mb-3 img-fluid rounded">
+            <img src="/img/knowledge.jpg" alt="Resourc" class="mb-3 img-fluid rounded">
             <h5 class="mb-2">Resourc</h5>
             <p class="text-muted small flex-grow-1">Curated articles, past questions and downloadable packs.</p>
             <a href="resourc.html" class="mt-3 btn btn-outline-primary align-self-start">Explore Resourc</a>
@@ -271,36 +280,80 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-4">
-          <h5 class="footer-title">MySchool</h5>
-          <p class="small text-muted">Modern tools for modern education — exams, resources, and academic support.</p>
-        </div>
 
-        <div class="col-md-4">
-          <h6 class="footer-title">Quick Links</h6>
-          <ul class="list-unstyled small">
-            <li><a href="myexamspace.html">MyExamSpace</a></li>
-            <li><a href="schoolme.html">SchoolMe</a></li>
-            <li><a href="resourc.html">Resourc</a></li>
-          </ul>
-        </div>
+<!-- ==================== NEWSLETTER SECTION ==================== -->
+<section class="newsletter-section">
+  <div class="container">
+    <h2>Subscribe to newsletter</h2>
+    <div class="underline"></div>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Email Address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
 
-        <div class="col-md-4">
-          <h6 class="footer-title">Contact</h6>
-          <p class="small text-muted mb-1">Email: info@myschool.com</p>
-          <p class="small text-muted">Phone: +234 800 123 4567</p>
-          <p class="small text-muted">Ota, Nigeria</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom text-center mt-4 pt-3 border-top">
-        <small class="text-muted">© <span id="year"></span> MySchool. All rights reserved.</small>
-      </div>
+<!-- FOOTER SECTION  -->
+<footer class="footer-template">
+  <div class="footer-container">
+    <!-- Brand Section -->
+    <div class="footer-col brand-col">
+      <h2 class="footer-logo">
+        <img src="/img/box.svg" alt="Edu Suite Logo" class="footer-logo-img"> EduVerse Suite
+      </h2>
+      <p>EduVerse Suite is an edutech service designed to connect students, teachers, and institutions in one seamless experience.
+         Our goal is to simplify academic workflows for maximum efficiency, enhancing how schools share information, curate exams, and manage courses.
+        Built with technology, accessibility, and excellence in mind, we are redefining how schools go digital: one click at a time..</p>
     </div>
-  </footer>
+
+    <!-- Menu -->
+    <div class="footer-col">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-col">
+      <h3>Our Edutech services</h3>
+      <ul>
+        <li><a href="apps/capture/capture.html">Capture</a></li>
+        <li><a href="apps/contact/contact.html">Contact</a></li>
+        <li><a href="apps/ejucate/ejucate.html">Ejucate</a></li>
+        <li><a href="apps/itutor/itutor.html">iTutor</a></li>
+        <li><a href="apps/resourc/resourc.html">Resourc</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h3 class="contact">Contact</h3>
+      <ul class="contact-info">
+        <li><i class="bi bi-geo-alt"></i> Ota, Ogun State, Nigeria</li>
+        <li><i class="bi bi-telephone"></i> +234 900 000 0000</li>
+        <li><i class="bi bi-envelope"></i> info@edusverseuite.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © <span id="year"></span> All rights reserved | <a href="#">HappyCode Technologies</a></p>
+    <div class="footer-social">
+      <a href="#"><i class="bi bi-pinterest"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -310,3 +363,7 @@
   <script src="/js/myschool.js"></script>
 </body>
 </html>
+
+
+<!-- EXTRA ELEMENTS STILL NOT IN USE -->
+<!-- Modern tools for modern education — exams, resources, and academic support.-->
