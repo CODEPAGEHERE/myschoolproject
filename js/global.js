@@ -7,7 +7,13 @@
 })();
 
 
-
+ window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+    loader.classList.add("fade-out");
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 600); // matches CSS transition time
+  });
 
 // BEGIN NAVBAR //
 
